@@ -1,0 +1,113 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 303.125,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 693,
+            "y": 0
+          },
+          "nodeIndex": "Key Measures",
+          "nodeLineageTag": "cf57c687-2770-476c-890c-81f27d79bbe1",
+          "size": {
+            "height": 388.0625,
+            "width": 234
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 1041.75,
+            "y": 0
+          },
+          "nodeIndex": "Last Refreshed",
+          "nodeLineageTag": "95cef111-92dd-4eed-9409-65691c5c1cd8",
+          "size": {
+            "height": 124,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 32.900000000000091,
+            "y": 0
+          },
+          "nodeIndex": "DataSourcesByDatasetId",
+          "nodeLineageTag": "c8f8b4c9-235c-4bfd-bfdb-a4e3d3e16346",
+          "size": {
+            "height": 300,
+            "width": 235.5625
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 96.804694567228637,
+            "y": 470.91118421052624
+          },
+          "nodeIndex": "WS-Owners",
+          "nodeLineageTag": "ae514777-818c-44a3-9a0f-c610d6cfe89e",
+          "size": {
+            "height": 202,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 381.74973163604727,
+            "y": 201.5625
+          },
+          "nodeIndex": "GatewayConnectors",
+          "nodeLineageTag": "7e06c9b9-6068-45ce-94d4-78b963ab1ec6",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 1342.5375,
+            "y": 186.45559210526312
+          },
+          "nodeIndex": "ConnectorDetails",
+          "nodeLineageTag": "42c14531-5bd2-46e1-a68b-6cfb4a0e177b",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 720.33022422790509,
+            "y": 514.58059210526312
+          },
+          "nodeIndex": "Gateways",
+          "nodeLineageTag": "052cefd3-6103-4e95-bf7c-327021507bdc",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 64,
+      "pinKeyFieldsToTop": true,
+      "showExtraHeaderInfo": true,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}
