@@ -1,0 +1,49 @@
+expression RelationCapacityGroupsDashboards =
+		let
+		    Source = PowerPlatform.Dataflows(null),
+		    Workspaces = Source{[Id="Workspaces"]}[Data],
+		    #"b1189a55-d3ea-4ceb-8dd9-994de230fca3" = Workspaces{[workspaceId="b1189a55-d3ea-4ceb-8dd9-994de230fca3"]}[Data],
+		    #"72d38d67-1c11-412c-98df-4ebbd50bcc7b" = #"b1189a55-d3ea-4ceb-8dd9-994de230fca3"{[dataflowId="72d38d67-1c11-412c-98df-4ebbd50bcc7b"]}[Data],
+		    RelationCapacityGroupsDashboards_ = #"72d38d67-1c11-412c-98df-4ebbd50bcc7b"{[entity="RelationCapacityGroupsDashboards",version=""]}[Data],
+		    #"Renamed Columns" = Table.RenameColumns(RelationCapacityGroupsDashboards_,{{"DashboardId", "ArtifactId"}, {"DashboardName", "ArtifactName"}}),
+		    #"Removed Columns" = Table.RemoveColumns(#"Renamed Columns",{"isReadOnly.1"}),
+		    #"Filtered Rows" = Table.SelectRows(#"Removed Columns", each [ArtifactId] <> null and [ArtifactId] <> "")
+		in
+		    #"Filtered Rows"
+	lineageTag: 5e1e58fb-791d-4b40-8ea2-49d473ce312c
+	queryGroup: 'No Loaded'
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression ServerName = "entaindataplatform.eu-west-1.snowflakecomputing.com" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 9f4e341b-790c-4f80-8b4b-890a80191522
+	queryGroup: Parameters
+
+	annotation PBI_ResultType = Text
+
+	annotation PBI_NavigationStepName = Navigation
+
+expression WarehouseName = "WH_RTL_BI_ESS" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 6825f363-a1d6-4c22-8f73-13a8a7d806d6
+	queryGroup: Parameters
+
+	annotation PBI_ResultType = Text
+
+expression DatabaseName = "EDLRETAILVIEWS" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: e8d61a3d-a30f-4642-937f-998366f3cff7
+	queryGroup: Parameters
+
+	annotation PBI_ResultType = Text
+
+	annotation PBI_NavigationStepName = Navigation
+
+expression RoleName = "RL_RETAIL_PRODBI_R" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: cda31519-95d9-41b3-af4f-2de2f9417a83
+	queryGroup: Parameters
+
+	annotation PBI_ResultType = Text
+
+	annotation PBI_NavigationStepName = Navigation
+

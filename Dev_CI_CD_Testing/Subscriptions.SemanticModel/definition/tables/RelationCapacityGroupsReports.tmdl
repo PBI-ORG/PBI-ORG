@@ -1,0 +1,152 @@
+table RelationCapacityGroupsReports
+	lineageTag: 8c546827-9f93-4838-bb46-1a93d0c5a052
+
+	column isReadOnly
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: e37bab84-a09b-429d-9da4-f995a54c3c1a
+		summarizeBy: none
+		sourceColumn: isReadOnly
+
+		annotation SummarizationSetBy = Automatic
+
+	column isOnDedicatedCapacity
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 2a15ae8c-f308-4ea5-b3d2-87e9396d2972
+		summarizeBy: none
+		sourceColumn: isOnDedicatedCapacity
+
+		annotation SummarizationSetBy = Automatic
+
+	column capacityMigrationStatus
+		dataType: string
+		lineageTag: 9772e786-bec8-4cb1-8e5f-42a284b491c9
+		summarizeBy: none
+		sourceColumn: capacityMigrationStatus
+
+		annotation SummarizationSetBy = Automatic
+
+	column type
+		dataType: string
+		lineageTag: 25126ab6-4682-40ac-b477-84218b512df5
+		summarizeBy: none
+		sourceColumn: type
+
+		annotation SummarizationSetBy = Automatic
+
+	column state
+		dataType: string
+		lineageTag: b5df666b-f1ac-41b0-9c8e-cac28a9879fe
+		summarizeBy: none
+		sourceColumn: state
+
+		annotation SummarizationSetBy = Automatic
+
+	column hasWorkspaceLevelSettings
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 5abe64dd-70b0-46be-b5a3-f3bf99870fa4
+		summarizeBy: none
+		sourceColumn: hasWorkspaceLevelSettings
+
+		annotation SummarizationSetBy = Automatic
+
+	column CapacityId
+		dataType: string
+		lineageTag: a4dacabe-8a53-4dc0-9bdf-b3bddafac62a
+		summarizeBy: none
+		sourceColumn: CapacityId
+
+		annotation SummarizationSetBy = Automatic
+
+	column CapacityNameOfReport
+		dataType: string
+		lineageTag: ba1eb773-391a-45c7-8681-0b60aa60bf64
+		summarizeBy: none
+		sourceColumn: CapacityNameOfReport
+
+		annotation SummarizationSetBy = Automatic
+
+	column GroupId
+		dataType: string
+		lineageTag: 37eb3046-456b-4b06-bdc6-65298cee0c0b
+		summarizeBy: none
+		sourceColumn: GroupId
+
+		annotation SummarizationSetBy = Automatic
+
+	column GroupName
+		dataType: string
+		lineageTag: 72b826c1-bb31-492a-90b7-b2805667bb50
+		summarizeBy: none
+		sourceColumn: GroupName
+
+		annotation SummarizationSetBy = Automatic
+
+	column ReportId
+		dataType: string
+		lineageTag: c59b2d88-fd86-4282-ab53-5daffae898aa
+		summarizeBy: none
+		sourceColumn: ReportId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ReportName
+		dataType: string
+		lineageTag: 6fee9577-d3a0-4175-a853-32f59d86dcf7
+		summarizeBy: none
+		sourceColumn: ReportName
+
+		annotation SummarizationSetBy = Automatic
+
+	column reportType
+		dataType: string
+		lineageTag: fde392cd-d180-4468-a7c5-5187c1badf3c
+		summarizeBy: none
+		sourceColumn: reportType
+
+		annotation SummarizationSetBy = Automatic
+
+	column DatasetId
+		dataType: string
+		lineageTag: 8c5156d7-1598-44a4-bc95-f20e2872601c
+		summarizeBy: none
+		sourceColumn: DatasetId
+
+		annotation SummarizationSetBy = Automatic
+
+	column description
+		dataType: string
+		lineageTag: 699058b5-6fbd-47d7-93e6-f7b45c53c1e3
+		summarizeBy: none
+		sourceColumn: description
+
+		annotation SummarizationSetBy = Automatic
+
+	column Index
+		dataType: int64
+		formatString: 0
+		lineageTag: a1fd0aea-0384-450e-87be-be4c2dc07e5d
+		summarizeBy: none
+		sourceColumn: Index
+
+		annotation SummarizationSetBy = Automatic
+
+	partition RelationCapacityGroupsReports-a3a1ab62-522c-4a88-b17a-e2127e45c849 = m
+		mode: import
+		source =
+				let
+				    Source = PowerPlatform.Dataflows(null),
+				    Workspaces = Source{[Id="Workspaces"]}[Data],
+				    #"b1189a55-d3ea-4ceb-8dd9-994de230fca3" = Workspaces{[workspaceId="b1189a55-d3ea-4ceb-8dd9-994de230fca3"]}[Data],
+				    #"72d38d67-1c11-412c-98df-4ebbd50bcc7b" = #"b1189a55-d3ea-4ceb-8dd9-994de230fca3"{[dataflowId="72d38d67-1c11-412c-98df-4ebbd50bcc7b"]}[Data],
+				    RelationCapacityGroupsReports_ = #"72d38d67-1c11-412c-98df-4ebbd50bcc7b"{[entity="RelationCapacityGroupsReports",version=""]}[Data],
+				    #"Lowercased Text" = Table.TransformColumns(RelationCapacityGroupsReports_,{{"ReportId", Text.Lower, type text}})
+				in
+				    #"Lowercased Text"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+
