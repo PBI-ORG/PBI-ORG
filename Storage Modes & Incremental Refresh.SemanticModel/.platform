@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Storage Modes & Incremental Refresh"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "87a6b6a2-21d5-4587-baae-9af993f20a8f"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Storage Modes & Incremental Refresh"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "1973516a-c4e2-4e50-908d-9016d7abc19e"
+  }
+}

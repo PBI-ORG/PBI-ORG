@@ -1,0 +1,376 @@
+table DataSourcesByDatasetId
+	lineageTag: c8f8b4c9-235c-4bfd-bfdb-a4e3d3e16346
+
+	column CapacityId
+		dataType: string
+		lineageTag: e5d17791-de40-4910-9220-f6ec8f2c894d
+		summarizeBy: none
+		sourceColumn: CapacityId
+
+		annotation SummarizationSetBy = Automatic
+
+	column CapacityName
+		dataType: string
+		lineageTag: 3644b8af-dd6c-4e5d-af58-e189665e8957
+		summarizeBy: none
+		sourceColumn: CapacityName
+
+		annotation SummarizationSetBy = Automatic
+
+	column GroupId
+		dataType: string
+		lineageTag: b27fbe6f-258e-47fe-9f06-4dfdafe6ae37
+		summarizeBy: none
+		sourceColumn: GroupId
+
+		annotation SummarizationSetBy = Automatic
+
+	column GroupName
+		dataType: string
+		lineageTag: 7bd7b55e-8466-468c-9e8a-acd89ae1de80
+		summarizeBy: none
+		sourceColumn: GroupName
+
+		annotation SummarizationSetBy = Automatic
+
+	column DatasetId
+		dataType: string
+		lineageTag: efe9d60f-03d0-4f7e-93c1-ae39bbc4db11
+		summarizeBy: none
+		sourceColumn: DatasetId
+
+		annotation SummarizationSetBy = Automatic
+
+	column DatasetName
+		dataType: string
+		lineageTag: a2816dd4-dde0-4047-94ec-bdb1816a74be
+		summarizeBy: none
+		sourceColumn: DatasetName
+
+		annotation SummarizationSetBy = Automatic
+
+	column datasourceType
+		dataType: string
+		lineageTag: 7462c79e-4824-43a4-9f94-c63d9feaaccd
+		summarizeBy: none
+		sourceColumn: datasourceType
+
+		annotation SummarizationSetBy = Automatic
+
+	column path
+		dataType: string
+		lineageTag: 682659b6-0318-4464-ac0f-7f778690ebae
+		summarizeBy: none
+		sourceColumn: path
+
+		annotation SummarizationSetBy = Automatic
+
+	column kind
+		dataType: string
+		lineageTag: c2dc0585-f60a-4f70-8764-6d227d61dccd
+		summarizeBy: none
+		sourceColumn: kind
+
+		annotation SummarizationSetBy = Automatic
+
+	column connectionString
+		dataType: string
+		lineageTag: fb791ca0-27bb-4980-8266-62a649ad9519
+		summarizeBy: none
+		sourceColumn: connectionString
+
+		annotation SummarizationSetBy = Automatic
+
+	column server
+		dataType: string
+		lineageTag: aef47f5c-54e7-432d-b633-c158d1626446
+		summarizeBy: none
+		sourceColumn: server
+
+		annotation SummarizationSetBy = Automatic
+
+	column database
+		dataType: string
+		lineageTag: 857236dd-68dd-4bf3-997a-745607b3e312
+		summarizeBy: none
+		sourceColumn: database
+
+		annotation SummarizationSetBy = Automatic
+
+	column url
+		dataType: string
+		lineageTag: 422097e0-74ad-48d2-adfd-0c43ae4fbd30
+		summarizeBy: none
+		sourceColumn: url
+
+		annotation SummarizationSetBy = Automatic
+
+	column datasourceId
+		dataType: string
+		lineageTag: 32e00ed7-ac51-486f-aa05-b363eebdbb02
+		summarizeBy: none
+		sourceColumn: datasourceId
+
+		annotation SummarizationSetBy = Automatic
+
+	column gatewayId
+		dataType: string
+		lineageTag: ede01183-9480-476e-9617-ab57e19ebdfc
+		summarizeBy: none
+		sourceColumn: gatewayId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Views
+		dataType: double
+		formatString: #,0
+		lineageTag: dfeba47d-3ff8-4382-a35d-ebb4c558bce0
+		summarizeBy: sum
+		sourceColumn: Views
+
+		annotation SummarizationSetBy = Automatic
+
+	column ReportId
+		dataType: string
+		lineageTag: 831e7b12-7527-4d16-b9bb-ae00641bfe8a
+		summarizeBy: none
+		sourceColumn: ReportId
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'CapacityId Of Dataset'
+		dataType: string
+		lineageTag: b891eabc-3332-42cf-9a9d-0abf8efd53be
+		summarizeBy: none
+		sourceColumn: CapacityId Of Dataset
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'CapacityName Of Dataset'
+		dataType: string
+		lineageTag: dca720bb-0dad-4c0b-9e37-bbcac3dde3f0
+		summarizeBy: none
+		sourceColumn: CapacityName Of Dataset
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'CapacityId Of Report'
+		dataType: string
+		lineageTag: 51b29f57-c16e-4fd1-9342-908dba256f5c
+		summarizeBy: none
+		sourceColumn: CapacityId Of Report
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'CapacityName Of Report'
+		dataType: string
+		lineageTag: a75c5142-580e-48e8-9620-311669170e85
+		summarizeBy: none
+		sourceColumn: CapacityName Of Report
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'GroupId Of Dataset'
+		dataType: string
+		lineageTag: a6078455-f3b3-4878-9da0-d6a8287cab82
+		summarizeBy: none
+		sourceColumn: GroupId Of Dataset
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'GroupName of Dataset'
+		dataType: string
+		lineageTag: 96762433-0797-41e4-a98b-ebd855158935
+		summarizeBy: none
+		sourceColumn: GroupName of Dataset
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'GroupId of Report'
+		dataType: string
+		lineageTag: 2fe8987d-df2d-41cc-81b2-81ab660fd005
+		summarizeBy: none
+		sourceColumn: GroupId of Report
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'GroupName of Report'
+		dataType: string
+		lineageTag: 1be11e57-6dfd-4334-aacc-3fe38e3dfb68
+		summarizeBy: none
+		sourceColumn: GroupName of Report
+
+		annotation SummarizationSetBy = Automatic
+
+	column Downloads
+		dataType: double
+		formatString: #,0
+		lineageTag: 006b29f4-0e7a-45ce-8f2e-b1b05ca41a73
+		summarizeBy: sum
+		sourceColumn: Downloads
+
+		annotation SummarizationSetBy = Automatic
+
+	column Downloads_90days
+		dataType: double
+		formatString: #,0
+		lineageTag: ab733240-fb89-4658-85d4-34450682bc15
+		summarizeBy: sum
+		sourceColumn: Downloads_90days
+
+		annotation SummarizationSetBy = Automatic
+
+	column Downloads_60days
+		dataType: double
+		formatString: #,0
+		lineageTag: a3d81a44-ff0c-461e-9314-19f807071fe1
+		summarizeBy: sum
+		sourceColumn: Downloads_60days
+
+		annotation SummarizationSetBy = Automatic
+
+	column Downloads_30days
+		dataType: double
+		formatString: #,0
+		lineageTag: 85c208fc-5ab1-4023-9c29-0ba7a876f905
+		summarizeBy: sum
+		sourceColumn: Downloads_30days
+
+		annotation SummarizationSetBy = Automatic
+
+	column AnalyzeInExcel
+		dataType: double
+		formatString: 0
+		lineageTag: c057b48a-2b90-4c7a-8b35-b891dfed0361
+		summarizeBy: sum
+		sourceColumn: AnalyzeInExcel
+
+		annotation SummarizationSetBy = Automatic
+
+	column reportname
+		dataType: string
+		lineageTag: 989df0f5-bd3a-4f75-9640-ff1986d4ea60
+		summarizeBy: none
+		sourceColumn: reportname
+
+		annotation SummarizationSetBy = Automatic
+
+	column Views_90days
+		dataType: double
+		formatString: #,0
+		lineageTag: ddfcf277-240f-415d-aa50-2a022516c402
+		summarizeBy: sum
+		sourceColumn: Views_90days
+
+		annotation SummarizationSetBy = Automatic
+
+	column Views_60days
+		dataType: double
+		formatString: #,0
+		lineageTag: 875cf012-d662-4ad9-bdb7-fb65e901f8b7
+		summarizeBy: sum
+		sourceColumn: Views_60days
+
+		annotation SummarizationSetBy = Automatic
+
+	column Views_30days
+		dataType: double
+		formatString: #,0
+		lineageTag: f8c74315-35a9-4e9f-b2ff-7fd53521b6b8
+		summarizeBy: sum
+		sourceColumn: Views_30days
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ReportName 2'
+		dataType: string
+		lineageTag: ebb333f2-de86-45cc-aee7-3194a0aaf4a4
+		summarizeBy: none
+		sourceColumn: ReportName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Custom
+		dataType: string
+		lineageTag: 44bf6670-d338-437e-8b55-2000ad3f4e21
+		summarizeBy: none
+		sourceColumn: Custom
+
+		annotation SummarizationSetBy = Automatic
+
+	column Snowflake_URL
+		dataType: string
+		lineageTag: af638812-51a3-4517-a907-8b48eb967e3e
+		summarizeBy: none
+		sourceColumn: Snowflake_URL
+
+		annotation SummarizationSetBy = Automatic
+
+	column WebUrl
+		dataType: string
+		lineageTag: 07ae471a-60e2-45c2-9be0-a926d3b1977f
+		summarizeBy: none
+		sourceColumn: WebUrl
+
+		annotation SummarizationSetBy = Automatic
+
+	column SnowflakeServerException
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 653e8f8b-d1d6-4260-b475-6149cfe420c5
+		summarizeBy: none
+		sourceColumn: SnowflakeServerException
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DataSourcesByDatasetId-731f9a97-d3e7-41e8-9ed8-3c5e85d49aab = m
+		mode: import
+		source = ```
+				let
+				    Source = Table.Combine({#"DataSourcesByDatasetId - BetMGM", #"DataSourcesByDatasetId - Digital", #"DataSourcesByDatasetId - Retail", #"DataSourcesByDatasetId - Retail 2",#"DataSourcesByDatasetId - Dev Digital_Retail"}),
+				    #"Merged Queries1" = Table.NestedJoin(Source, {"DatasetId"}, RelationCapacityGroupsReports, {"DatasetId"}, "RelationCapacityGroupsReports", JoinKind.LeftOuter),
+				    #"Expanded RelationCapacityGroupsReports" = Table.ExpandTableColumn(#"Merged Queries1", "RelationCapacityGroupsReports", {"ReportId"}, {"ReportId"}),
+				    #"Merged Queries" = Table.NestedJoin(#"Expanded RelationCapacityGroupsReports", {"DatasetId", "ReportId"}, pbi_activityevents_Views, {"datasetid", "reportid"}, "pbi_activityevents", JoinKind.LeftOuter),
+				    #"Expanded pbi_activityevents" = Table.ExpandTableColumn(#"Merged Queries", "pbi_activityevents", {"reportname", "Views", "Views_90days", "Views_60days", "Views_30days", "Downloads", "Downloads_90days", "Downloads_60days", "Downloads_30days", "AnalyzeInExcel"}, {"reportname", "Views", "Views_90days", "Views_60days", "Views_30days", "Downloads", "Downloads_90days", "Downloads_60days", "Downloads_30days", "AnalyzeInExcel"}),
+				    #"Merged Queries2" = Table.NestedJoin(#"Expanded pbi_activityevents", {"DatasetId"}, RelationCapacityGroupsDatasets, {"DatasetId"}, "RelationCapacityGroupsDatasets", JoinKind.LeftOuter),
+				    #"Expanded RelationCapacityGroupsDatasets" = Table.ExpandTableColumn(#"Merged Queries2", "RelationCapacityGroupsDatasets", {"CapacityId", "CapacityName","GroupId","GroupName"}, {"CapacityId Of Dataset", "CapacityName Of Dataset","GroupId Of Dataset","GroupName of Dataset"}),
+				    #"Merged Queries3" = Table.NestedJoin(#"Expanded RelationCapacityGroupsDatasets", {"ReportId"}, RelationCapacityGroupsReportsDatasets, {"ReportId"}, "RelationCapacityGroupsReportsDatasets", JoinKind.LeftOuter),
+				    #"Expanded RelationCapacityGroupsReportsDatasets" = Table.ExpandTableColumn(#"Merged Queries3", "RelationCapacityGroupsReportsDatasets", {"CapacityId", "CapacityNameOfReport","GroupId","GroupName","ReportName"}, {"CapacityId Of Report", "CapacityName Of Report","GroupId of Report","GroupName of Report","ReportName"}),
+				    #"Replaced Value" = Table.ReplaceValue(#"Expanded RelationCapacityGroupsReportsDatasets",null,0,Replacer.ReplaceValue,{"Views", "Views_90days", "Views_60days", "Views_30days", "Downloads", "Downloads_90days", "Downloads_60days", "Downloads_30days", "AnalyzeInExcel"}),
+				    #"Replaced Value1" = Table.ReplaceValue(#"Replaced Value",null,"",Replacer.ReplaceValue,{"reportname"}),
+				    #"Added Custom" = Table.AddColumn(#"Replaced Value1", "Custom", each [reportname] & [ReportName]),
+				    #"Replaced Value2" = Table.ReplaceValue(#"Added Custom",null,"0",Replacer.ReplaceValue,{"Custom"}),
+				    #"Filtered Rows1" = Table.SelectRows(#"Replaced Value2", each not Text.StartsWith([Custom], "[App")),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Filtered Rows1",{{"path", type text}}),
+				    #"Added Conditional Column" = Table.AddColumn(#"Changed Type", "Snowflake_URL", each if [kind] = "Snowflake" then Text.BeforeDelimiter([path], ";") else [url]),
+				    #"Update URL"= Table.ReplaceValue( #"Added Conditional Column" ,each [url],each if Text.Contains([kind], "Snowflake") then [Snowflake_URL] else [url],Replacer.ReplaceValue,{"url"}),
+				    #"Filtered Rows" = Table.SelectRows(#"Update URL", each true),
+				    #"Added Custom1" = Table.AddColumn(#"Filtered Rows", "SnowflakeServerException", each if [CapacityName] = "BetMGM" and [kind] = "Snowflake" and
+				   ( [url] = "ucssray-edp_us_prod.snowflakecomputing.com" or 
+				     [url] = "ucssray-edpusprod.snowflakecomputing.com" or
+				     [url] = "oe24878.us-central1.gcp.snowflakecomputing.com" or
+				     [url] = "ucssray-edp_us_dev.snowflakecomputing.com" or
+				     [url] = "ucssray-edpusdev.snowflakecomputing.com" or
+				     [url] = "so42871.us-central1.gcp.snowflakecomputing.com" or 
+				     [url] = "ueb01410.us-east-1.snowflakecomputing.com" or 
+				     [url] = "nyb97951.us-east-1.snowflakecomputing.com" ) then 
+				    true 
+				else if [CapacityName] <> "BetMGM" and 
+				        ( [url] = "entaindataplatform.eu-west-1.snowflakecomputing.com" or 
+				          [url] = "pb01915.eu-west-1.snowflakecomputing.com" or 
+				          [url] = "nn34832.eu-west-1.snowflakecomputing.com" or 
+				          [url] = "so22763.eu-west-1.snowflakecomputing.com" ) then 
+				    true 
+				else 
+				    false),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Added Custom1",{{"SnowflakeServerException", type logical}}),
+				    #"Added Custom2" = Table.AddColumn(#"Changed Type1", "WebUrl", each "https://app.powerbi.com/groups/" & [GroupId] & "/datasets/" & [DatasetId] & "/details"),
+				    #"Filtered Rows2" = Table.SelectRows(#"Added Custom2", each true)
+				in
+				    #"Filtered Rows2"
+				```
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
