@@ -1,0 +1,1349 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.0.0/schema.json",
+  "name": "265276b1e67eeed8b4c7",
+  "position": {
+    "x": 17.496720745598893,
+    "y": 456.50535036244389,
+    "z": 1000,
+    "width": 1245.4483948912666,
+    "height": 264.04142216085603,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DataSourcesByDatasetId"
+                    }
+                  },
+                  "Property": "CapacityName Of Dataset"
+                }
+              },
+              "queryRef": "DataSourcesByDatasetId.CapacityName Of Dataset",
+              "nativeQueryRef": "CapacityName Of Dataset"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DataSourcesByDatasetId"
+                    }
+                  },
+                  "Property": "GroupName of Dataset"
+                }
+              },
+              "queryRef": "DataSourcesByDatasetId.GroupName of Dataset",
+              "nativeQueryRef": "GroupName of Dataset"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DataSourcesByDatasetId"
+                    }
+                  },
+                  "Property": "DatasetId"
+                }
+              },
+              "queryRef": "DataSourcesByDatasetId.DatasetId",
+              "nativeQueryRef": "DatasetId"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DataSourcesByDatasetId"
+                    }
+                  },
+                  "Property": "DatasetName"
+                }
+              },
+              "queryRef": "DataSourcesByDatasetId.DatasetName",
+              "nativeQueryRef": "DatasetName"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DataSourcesByDatasetId"
+                    }
+                  },
+                  "Property": "reportname"
+                }
+              },
+              "queryRef": "DataSourcesByDatasetId.reportname",
+              "nativeQueryRef": "Report Name",
+              "displayName": "Report Name"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "DataSourcesByDatasetId"
+                        }
+                      },
+                      "Property": "Views"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(DataSourcesByDatasetId.Views)",
+              "nativeQueryRef": "Views"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "DataSourcesByDatasetId"
+                        }
+                      },
+                      "Property": "Views_90days"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(DataSourcesByDatasetId.Views_90days)",
+              "nativeQueryRef": "Days Views 90",
+              "displayName": "Days Views 90"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "DataSourcesByDatasetId"
+                        }
+                      },
+                      "Property": "Views_60days"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(DataSourcesByDatasetId.Views_60days)",
+              "nativeQueryRef": "Days Views 60 1",
+              "displayName": "Days Views 60"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "DataSourcesByDatasetId"
+                        }
+                      },
+                      "Property": "Views_30days"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(DataSourcesByDatasetId.Views_30days)",
+              "nativeQueryRef": "Days Views 30",
+              "displayName": "Days Views 30"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "DataSourcesByDatasetId"
+                        }
+                      },
+                      "Property": "Downloads"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(DataSourcesByDatasetId.Downloads)",
+              "nativeQueryRef": "Total Downloads",
+              "displayName": "Total Downloads"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "DataSourcesByDatasetId"
+                        }
+                      },
+                      "Property": "Downloads_90days"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(DataSourcesByDatasetId.Downloads_90days)",
+              "nativeQueryRef": "Downloads 90 days",
+              "displayName": "Downloads 90 days"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "DataSourcesByDatasetId"
+                        }
+                      },
+                      "Property": "Downloads_60days"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(DataSourcesByDatasetId.Downloads_60days)",
+              "nativeQueryRef": "Downloads 60 days",
+              "displayName": "Downloads 60 days"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "DataSourcesByDatasetId"
+                        }
+                      },
+                      "Property": "Downloads_30days"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(DataSourcesByDatasetId.Downloads_30days)",
+              "nativeQueryRef": "Downloads 30 days",
+              "displayName": "Downloads 30 days"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "DataSourcesByDatasetId"
+                        }
+                      },
+                      "Property": "AnalyzeInExcel"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(DataSourcesByDatasetId.AnalyzeInExcel)",
+              "nativeQueryRef": "Analyze In Excel",
+              "displayName": "Analyze In Excel"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DataSourcesByDatasetId"
+                    }
+                  },
+                  "Property": "datasourceType"
+                }
+              },
+              "queryRef": "DataSourcesByDatasetId.datasourceType"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "GatewayConnectors"
+                    }
+                  },
+                  "Property": "name"
+                }
+              },
+              "queryRef": "GatewayConnectors.name",
+              "nativeQueryRef": "GatewayName",
+              "displayName": "GatewayName"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "GatewayConnectors"
+                    }
+                  },
+                  "Property": "datasourceName"
+                }
+              },
+              "queryRef": "GatewayConnectors.datasourceName",
+              "nativeQueryRef": "datasourceName"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "GatewayConnectors"
+                    }
+                  },
+                  "Property": "connectionDetails"
+                }
+              },
+              "queryRef": "GatewayConnectors.connectionDetails",
+              "nativeQueryRef": "connectionDetails"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DataSourcesByDatasetId"
+                    }
+                  },
+                  "Property": "database"
+                }
+              },
+              "queryRef": "DataSourcesByDatasetId.database"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DataSourcesByDatasetId"
+                    }
+                  },
+                  "Property": "connectionString"
+                }
+              },
+              "queryRef": "DataSourcesByDatasetId.connectionString"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DataSourcesByDatasetId"
+                    }
+                  },
+                  "Property": "kind"
+                }
+              },
+              "queryRef": "DataSourcesByDatasetId.kind"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DataSourcesByDatasetId"
+                    }
+                  },
+                  "Property": "server"
+                }
+              },
+              "queryRef": "DataSourcesByDatasetId.server"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DataSourcesByDatasetId"
+                    }
+                  },
+                  "Property": "url"
+                }
+              },
+              "queryRef": "DataSourcesByDatasetId.url"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DataSourcesByDatasetId"
+                    }
+                  },
+                  "Property": "path"
+                }
+              },
+              "queryRef": "DataSourcesByDatasetId.path"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DataSourcesByDatasetId"
+                    }
+                  },
+                  "Property": "CapacityName Of Report"
+                }
+              },
+              "queryRef": "DataSourcesByDatasetId.CapacityName Of Report",
+              "nativeQueryRef": "CapacityName Of Report"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DataSourcesByDatasetId"
+                    }
+                  },
+                  "Property": "GroupName of Report"
+                }
+              },
+              "queryRef": "DataSourcesByDatasetId.GroupName of Report",
+              "nativeQueryRef": "GroupName of Report"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "DataSourcesByDatasetId"
+                      }
+                    },
+                    "Property": "Views"
+                  }
+                },
+                "Function": 0
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "columnHeaders": [
+        {
+          "properties": {
+            "autoSizeColumnWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.5
+                    }
+                  }
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            },
+            "wordWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Calibri'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "total": [
+        {
+          "properties": {
+            "totals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "40D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "task._count"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "65D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "task._closed%"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "45D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "task._count_open"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "68D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(task._time_taken_days)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "118D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "task.dv_sys_class_name"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "50D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "task.resolved_at.Variation.Date Hierarchy.Month"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "36D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "task.resolved_at.Variation.Date Hierarchy.Year"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "48D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "task.resolved_at.Variation.Date Hierarchy.Quarter"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "30D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "task.resolved_at.Variation.Date Hierarchy.Day"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "36D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "task._closed_at_datetime.Variation.Date Hierarchy.Year"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "48D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "task._closed_at_datetime.Variation.Date Hierarchy.Quarter"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "50D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "task._closed_at_datetime.Variation.Date Hierarchy.Month"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "30D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "task._closed_at_datetime.Variation.Date Hierarchy.Day"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "59D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(dim_date.datenum)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "110D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(dim_date.changetrackingmask)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "101D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(dim_date.calyearquarternum)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "74D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(dim_date.Quarter Num)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "130D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(dim_date.MonthsFromActualMonth)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "95.2311199013993D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "DataSourcesByDatasetId.kind"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "100.53642655204615D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "DataSourcesByDatasetId.connectionString"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "125.3907340335708D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "DataSourcesByDatasetId.server"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "80.32313682431325D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "DataSourcesByDatasetId.database"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "261.7927191190953D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "DataSourcesByDatasetId.url"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "591.8079439879824D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "DataSourcesByDatasetId.path"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "94.94701831681547D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "DataSourcesByDatasetId.datasourceType"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "50D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(DataSourcesByDatasetId.Views)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "139.54344679513807D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "DataSourcesByDatasetId.DatasetName"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "138.5660910232993D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "DataSourcesByDatasetId.DatasetId"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "124.88233619480756D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "DataSourcesByDatasetId.CapacityName Of Dataset"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "119.13857339632146D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "DataSourcesByDatasetId.GroupName of Dataset"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "131D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "DataSourcesByDatasetId.CapacityName Of Report"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "162D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "DataSourcesByDatasetId.GroupName of Report"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "95.96026490066225D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "GatewayConnectors.datasourceName"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "221.54969279220268D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "GatewayConnectors.connectionDetails"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "129D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "GatewayConnectors.name"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "60.25055770433292D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(DataSourcesByDatasetId.Downloads)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "60.57690748812887D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(DataSourcesByDatasetId.Downloads_30days)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "70.03311258278146D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(DataSourcesByDatasetId.Downloads_90days)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "62.03477545886D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(DataSourcesByDatasetId.Downloads_60days)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "53.211921285621486D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(DataSourcesByDatasetId.AnalyzeInExcel)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "55.03177228730134D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(DataSourcesByDatasetId.Views_30days)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "64.59033466918635D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(DataSourcesByDatasetId.Views_60days)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "53.390732989619984D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(DataSourcesByDatasetId.Views_90days)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "137.8741741170833D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "DataSourcesByDatasetId.reportname"
+          }
+        }
+      ],
+      "grid": [
+        {
+          "properties": {
+            "outlineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.3
+                    }
+                  }
+                }
+              }
+            },
+            "gridVertical": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "gridVerticalColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.3
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            },
+            "wordWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Detail'"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "background": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#43268B'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#3a3a3a'"
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "20D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "background": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#3a3a3a'"
+                    }
+                  }
+                }
+              }
+            },
+            "border": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#3a3a3a'"
+                    }
+                  }
+                }
+              }
+            },
+            "foreground": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
