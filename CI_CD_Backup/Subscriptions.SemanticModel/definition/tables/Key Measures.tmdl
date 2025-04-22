@@ -1,0 +1,49 @@
+table 'Key Measures'
+	lineageTag: cf57c687-2770-476c-890c-81f27d79bbe1
+
+	measure #Subscriptions = COUNT(pbi_activityevents[activityid])
+		formatString: 0
+		lineageTag: 6df1310a-045c-44fc-ba21-5ac07a3f5a5e
+
+	measure #Reports = DISTINCTCOUNT(pbi_activityevents[reportid])
+		formatString: 0
+		lineageTag: afcc5cbb-b13d-4ff9-8dfa-fbb842893cbd
+
+	measure '#NewSubscriptionsReport(Add to Excel)' = COUNT(ReportEmailSubscriptionsCreated[reportid])
+		formatString: 0
+		lineageTag: 3d907c76-0246-4780-b6b3-8e0afb5beac2
+
+	measure '#NewSubscriptionsDashboard(Add to Excel)' = COUNT(DashboardEmailSubscriptionsCreated[dashboardid])
+		formatString: 0
+		lineageTag: 6f4547ed-ad84-4770-b61e-f1e07d370415
+
+	measure '#ReportDeleted(Running - 0)' = COUNT('ReportsDeleted(MakeRunning - 0)'[ReportId])
+		formatString: 0
+		lineageTag: 8c1007f2-1c9f-4069-9d24-d62569a0d90f
+
+	measure '#DashboardDeleted(Running - 0)' = COUNT('DashboardDeleted(MakeRunning - 0)'[DashboardID])
+		formatString: 0
+		lineageTag: df4331df-7baa-48c9-ad1f-d0048198a892
+
+	measure 'API Report Subscriptions' = DISTINCTCOUNT(CreatedSubscriptionsByReportId_API[id])
+		formatString: 0
+		lineageTag: 532459d6-8aaf-43d6-a74f-d8b57591d49b
+
+	measure 'API Dashboard Subscriptions' = DISTINCTCOUNT(CreatedSubscriptionsByDashboard_API[id])
+		formatString: 0
+		lineageTag: 9d4a838e-bfa0-449c-9241-58cb69070e71
+
+	partition 'Key Measures-8d5fc69d-e01e-4096-9222-d4a7aa001e7f' = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", type text}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"Column1"})
+				in
+				    #"Removed Columns"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

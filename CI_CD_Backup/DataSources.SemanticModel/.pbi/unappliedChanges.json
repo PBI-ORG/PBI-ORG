@@ -1,0 +1,431 @@
+{
+  "version": "1.0",
+  "conceptualSchemaSettings": {},
+  "queries": [
+    {
+      "name": "Key Measures",
+      "lineageTag": "cf57c687-2770-476c-890c-81f27d79bbe1",
+      "navigationStepName": "Navigation",
+      "text": [
+        "let",
+        "    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"i44FAA==\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),",
+        "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Column1\", type text}}),",
+        "    #\"Removed Columns\" = Table.RemoveColumns(#\"Changed Type\",{\"Column1\"})",
+        "in",
+        "    #\"Removed Columns\""
+      ],
+      "isDirectQuery": false,
+      "lastLoadedAsTableFormulaText": "{\"IncludesReferencedQueries\":false,\"RootFormulaText\":\"let\\n    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\\\"i44FAA==\\\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),\\n    #\\\"Changed Type\\\" = Table.TransformColumnTypes(Source,{{\\\"Column1\\\", type text}}),\\n    #\\\"Removed Columns\\\" = Table.RemoveColumns(#\\\"Changed Type\\\",{\\\"Column1\\\"})\\nin\\n    #\\\"Removed Columns\\\"\",\"ReferencedQueriesFormulaText\":{}}",
+      "loadAsTableDisabled": false,
+      "resultType": "Table",
+      "isHidden": false
+    },
+    {
+      "name": "Last Refreshed",
+      "lineageTag": "95cef111-92dd-4eed-9409-65691c5c1cd8",
+      "text": [
+        "let",
+        "    Source = DateTime.LocalNow()",
+        "in",
+        "    Source"
+      ],
+      "isDirectQuery": false,
+      "lastLoadedAsTableFormulaText": "{\"IncludesReferencedQueries\":false,\"RootFormulaText\":\"let\\n    Source = DateTime.LocalNow()\\nin\\n    Source\",\"ReferencedQueriesFormulaText\":{}}",
+      "loadAsTableDisabled": false,
+      "resultType": "DateTime",
+      "isHidden": false
+    },
+    {
+      "name": "DataSourcesByDatasetId - BetMGM",
+      "lineageTag": "84791317-cced-4934-a638-840cc6d71e5f",
+      "queryGroupId": "5148cc2b-7679-4959-a06c-b240d156f39c",
+      "text": [
+        "let",
+        "    Source = PowerPlatform.Dataflows(null),",
+        "    Workspaces = Source{[Id=\"Workspaces\"]}[Data],",
+        "    #\"6c3250c1-cd1a-4bb8-acb7-0518bc2c8151\" = Workspaces{[workspaceId=\"6c3250c1-cd1a-4bb8-acb7-0518bc2c8151\"]}[Data],",
+        "    #\"b291c479-c34d-4060-984c-5ad4971bb432\" = #\"6c3250c1-cd1a-4bb8-acb7-0518bc2c8151\"{[dataflowId=\"b291c479-c34d-4060-984c-5ad4971bb432\"]}[Data],",
+        "    #\"DataSourcesByDatasetId - BetMGM_\" = #\"b291c479-c34d-4060-984c-5ad4971bb432\"{[entity=\"DataSourcesByDatasetId - BetMGM\",version=\"\"]}[Data]",
+        "in",
+        "    #\"DataSourcesByDatasetId - BetMGM_\""
+      ],
+      "loadAsTableDisabled": true,
+      "resultType": "Table",
+      "isHidden": false
+    },
+    {
+      "name": "DataSourcesByDatasetId - Digital",
+      "lineageTag": "c2456a95-c8b9-4eed-954d-410f3ed7c23e",
+      "queryGroupId": "5148cc2b-7679-4959-a06c-b240d156f39c",
+      "text": [
+        "let",
+        "    Source = PowerPlatform.Dataflows(null),",
+        "    Workspaces = Source{[Id=\"Workspaces\"]}[Data],",
+        "    #\"6c3250c1-cd1a-4bb8-acb7-0518bc2c8151\" = Workspaces{[workspaceId=\"6c3250c1-cd1a-4bb8-acb7-0518bc2c8151\"]}[Data],",
+        "    #\"224c0219-03f3-49a2-a365-683f16de69ae\" = #\"6c3250c1-cd1a-4bb8-acb7-0518bc2c8151\"{[dataflowId=\"224c0219-03f3-49a2-a365-683f16de69ae\"]}[Data],",
+        "    #\"DataSourcesByDatasetId - Digital_\" = #\"224c0219-03f3-49a2-a365-683f16de69ae\"{[entity=\"DataSourcesByDatasetId - Digital\",version=\"\"]}[Data]",
+        "in",
+        "    #\"DataSourcesByDatasetId - Digital_\""
+      ],
+      "loadAsTableDisabled": true,
+      "resultType": "Table",
+      "isHidden": false
+    },
+    {
+      "name": "DataSourcesByDatasetId - Retail",
+      "lineageTag": "61050744-515c-4c5f-9a29-2f72cbfb505e",
+      "queryGroupId": "5148cc2b-7679-4959-a06c-b240d156f39c",
+      "text": [
+        "let",
+        "    Source = PowerPlatform.Dataflows(null),",
+        "    Workspaces = Source{[Id=\"Workspaces\"]}[Data],",
+        "    #\"6c3250c1-cd1a-4bb8-acb7-0518bc2c8151\" = Workspaces{[workspaceId=\"6c3250c1-cd1a-4bb8-acb7-0518bc2c8151\"]}[Data],",
+        "    #\"1b5bcb55-648e-4848-a432-1d581f38627a\" = #\"6c3250c1-cd1a-4bb8-acb7-0518bc2c8151\"{[dataflowId=\"1b5bcb55-648e-4848-a432-1d581f38627a\"]}[Data],",
+        "    #\"DataSourcesByDatasetId - Retail_\" = #\"1b5bcb55-648e-4848-a432-1d581f38627a\"{[entity=\"DataSourcesByDatasetId - Retail\",version=\"\"]}[Data]",
+        "in",
+        "    #\"DataSourcesByDatasetId - Retail_\""
+      ],
+      "loadAsTableDisabled": true,
+      "resultType": "Table",
+      "isHidden": false
+    },
+    {
+      "name": "DataSourcesByDatasetId - Retail 2",
+      "lineageTag": "a5302097-bea0-4939-96d5-5c84f0a19936",
+      "queryGroupId": "5148cc2b-7679-4959-a06c-b240d156f39c",
+      "text": [
+        "let",
+        "    Source = PowerPlatform.Dataflows(null),",
+        "    Workspaces = Source{[Id=\"Workspaces\"]}[Data],",
+        "    #\"6c3250c1-cd1a-4bb8-acb7-0518bc2c8151\" = Workspaces{[workspaceId=\"6c3250c1-cd1a-4bb8-acb7-0518bc2c8151\"]}[Data],",
+        "    #\"3409e2bc-b2cd-42bd-93be-fc53928b4cc7\" = #\"6c3250c1-cd1a-4bb8-acb7-0518bc2c8151\"{[dataflowId=\"3409e2bc-b2cd-42bd-93be-fc53928b4cc7\"]}[Data],",
+        "    #\"DataSourcesByDatasetId - Retail 2_\" = #\"3409e2bc-b2cd-42bd-93be-fc53928b4cc7\"{[entity=\"DataSourcesByDatasetId - Retail 2\",version=\"\"]}[Data]",
+        "in",
+        "    #\"DataSourcesByDatasetId - Retail 2_\""
+      ],
+      "loadAsTableDisabled": true,
+      "resultType": "Table",
+      "isHidden": false
+    },
+    {
+      "name": "DataSourcesByDatasetId",
+      "lineageTag": "c8f8b4c9-235c-4bfd-bfdb-a4e3d3e16346",
+      "text": [
+        "let",
+        "    Source = Table.Combine({#\"DataSourcesByDatasetId - BetMGM\", #\"DataSourcesByDatasetId - Digital\", #\"DataSourcesByDatasetId - Retail\", #\"DataSourcesByDatasetId - Retail 2\",#\"DataSourcesByDatasetId - Dev Digital_Retail\"}),",
+        "    #\"Merged Queries1\" = Table.NestedJoin(Source, {\"DatasetId\"}, RelationCapacityGroupsReports, {\"DatasetId\"}, \"RelationCapacityGroupsReports\", JoinKind.LeftOuter),",
+        "    #\"Expanded RelationCapacityGroupsReports\" = Table.ExpandTableColumn(#\"Merged Queries1\", \"RelationCapacityGroupsReports\", {\"ReportId\"}, {\"ReportId\"}),",
+        "    #\"Merged Queries\" = Table.NestedJoin(#\"Expanded RelationCapacityGroupsReports\", {\"DatasetId\", \"ReportId\"}, pbi_activityevents_Views, {\"datasetid\", \"reportid\"}, \"pbi_activityevents\", JoinKind.LeftOuter),",
+        "    #\"Expanded pbi_activityevents\" = Table.ExpandTableColumn(#\"Merged Queries\", \"pbi_activityevents\", {\"reportname\", \"Views\", \"Views_90days\", \"Views_60days\", \"Views_30days\", \"Downloads\", \"Downloads_90days\", \"Downloads_60days\", \"Downloads_30days\", \"AnalyzeInExcel\"}, {\"reportname\", \"Views\", \"Views_90days\", \"Views_60days\", \"Views_30days\", \"Downloads\", \"Downloads_90days\", \"Downloads_60days\", \"Downloads_30days\", \"AnalyzeInExcel\"}),",
+        "    #\"Merged Queries2\" = Table.NestedJoin(#\"Expanded pbi_activityevents\", {\"DatasetId\"}, RelationCapacityGroupsDatasets, {\"DatasetId\"}, \"RelationCapacityGroupsDatasets\", JoinKind.LeftOuter),",
+        "    #\"Expanded RelationCapacityGroupsDatasets\" = Table.ExpandTableColumn(#\"Merged Queries2\", \"RelationCapacityGroupsDatasets\", {\"CapacityId\", \"CapacityName\",\"GroupId\",\"GroupName\"}, {\"CapacityId Of Dataset\", \"CapacityName Of Dataset\",\"GroupId Of Dataset\",\"GroupName of Dataset\"}),",
+        "    #\"Merged Queries3\" = Table.NestedJoin(#\"Expanded RelationCapacityGroupsDatasets\", {\"ReportId\"}, RelationCapacityGroupsReportsDatasets, {\"ReportId\"}, \"RelationCapacityGroupsReportsDatasets\", JoinKind.LeftOuter),",
+        "    #\"Expanded RelationCapacityGroupsReportsDatasets\" = Table.ExpandTableColumn(#\"Merged Queries3\", \"RelationCapacityGroupsReportsDatasets\", {\"CapacityId\", \"CapacityNameOfReport\",\"GroupId\",\"GroupName\",\"ReportName\"}, {\"CapacityId Of Report\", \"CapacityName Of Report\",\"GroupId of Report\",\"GroupName of Report\",\"ReportName\"}),",
+        "    #\"Replaced Value\" = Table.ReplaceValue(#\"Expanded RelationCapacityGroupsReportsDatasets\",null,0,Replacer.ReplaceValue,{\"Views\", \"Views_90days\", \"Views_60days\", \"Views_30days\", \"Downloads\", \"Downloads_90days\", \"Downloads_60days\", \"Downloads_30days\", \"AnalyzeInExcel\"}),",
+        "    #\"Replaced Value1\" = Table.ReplaceValue(#\"Replaced Value\",null,\"\",Replacer.ReplaceValue,{\"reportname\"}),",
+        "    #\"Added Custom\" = Table.AddColumn(#\"Replaced Value1\", \"Custom\", each [reportname] & [ReportName]),",
+        "    #\"Replaced Value2\" = Table.ReplaceValue(#\"Added Custom\",null,\"0\",Replacer.ReplaceValue,{\"Custom\"}),",
+        "    #\"Filtered Rows1\" = Table.SelectRows(#\"Replaced Value2\", each not Text.StartsWith([Custom], \"[App\")),",
+        "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Filtered Rows1\",{{\"path\", type text}}),",
+        "    #\"Added Conditional Column\" = Table.AddColumn(#\"Changed Type\", \"Snowflake_URL\", each if [kind] = \"Snowflake\" then Text.BeforeDelimiter([path], \";\") else [url]),",
+        "    #\"Update URL\"= Table.ReplaceValue( #\"Added Conditional Column\" ,each [url],each if Text.Contains([kind], \"Snowflake\") then [Snowflake_URL] else [url],Replacer.ReplaceValue,{\"url\"}),",
+        "    #\"Filtered Rows\" = Table.SelectRows(#\"Update URL\", each true),",
+        "    #\"Added Custom1\" = Table.AddColumn(#\"Filtered Rows\", \"SnowflakeServerException\", each if [CapacityName] = \"BetMGM\" and [kind] = \"Snowflake\" and",
+        "   ( [url] = \"ucssray-edp_us_prod.snowflakecomputing.com\" or ",
+        "     [url] = \"ucssray-edpusprod.snowflakecomputing.com\" or",
+        "     [url] = \"oe24878.us-central1.gcp.snowflakecomputing.com\" or",
+        "     [url] = \"ucssray-edp_us_dev.snowflakecomputing.com\" or",
+        "     [url] = \"ucssray-edpusdev.snowflakecomputing.com\" or",
+        "     [url] = \"so42871.us-central1.gcp.snowflakecomputing.com\" or ",
+        "     [url] = \"ueb01410.us-east-1.snowflakecomputing.com\" or ",
+        "     [url] = \"nyb97951.us-east-1.snowflakecomputing.com\" ) then ",
+        "    true ",
+        "else if [CapacityName] <> \"BetMGM\" and ",
+        "        ( [url] = \"entaindataplatform.eu-west-1.snowflakecomputing.com\" or ",
+        "          [url] = \"pb01915.eu-west-1.snowflakecomputing.com\" or ",
+        "          [url] = \"nn34832.eu-west-1.snowflakecomputing.com\" or ",
+        "          [url] = \"so22763.eu-west-1.snowflakecomputing.com\" ) then ",
+        "    true ",
+        "else ",
+        "    false),",
+        "    #\"Changed Type1\" = Table.TransformColumnTypes(#\"Added Custom1\",{{\"SnowflakeServerException\", type logical}}),",
+        "    #\"Added Custom2\" = Table.AddColumn(#\"Changed Type1\", \"WebUrl\", each \"https://app.powerbi.com/groups/\" & [GroupId] & \"/datasets/\" & [DatasetId] & \"/details\"),",
+        "    #\"Filtered Rows2\" = Table.SelectRows(#\"Added Custom2\", each true)",
+        "in",
+        "    #\"Filtered Rows2\""
+      ],
+      "isDirectQuery": false,
+      "lastLoadedAsTableFormulaText": "{\"IncludesReferencedQueries\":false,\"RootFormulaText\":\"let\\n    Source = Table.Combine({#\\\"DataSourcesByDatasetId - BetMGM\\\", #\\\"DataSourcesByDatasetId - Digital\\\", #\\\"DataSourcesByDatasetId - Retail\\\", #\\\"DataSourcesByDatasetId - Retail 2\\\",#\\\"DataSourcesByDatasetId - Dev Digital_Retail\\\"}),\\n    #\\\"Merged Queries1\\\" = Table.NestedJoin(Source, {\\\"DatasetId\\\"}, RelationCapacityGroupsReports, {\\\"DatasetId\\\"}, \\\"RelationCapacityGroupsReports\\\", JoinKind.LeftOuter),\\n    #\\\"Expanded RelationCapacityGroupsReports\\\" = Table.ExpandTableColumn(#\\\"Merged Queries1\\\", \\\"RelationCapacityGroupsReports\\\", {\\\"ReportId\\\"}, {\\\"ReportId\\\"}),\\n    #\\\"Merged Queries\\\" = Table.NestedJoin(#\\\"Expanded RelationCapacityGroupsReports\\\", {\\\"DatasetId\\\", \\\"ReportId\\\"}, pbi_activityevents_Views, {\\\"datasetid\\\", \\\"reportid\\\"}, \\\"pbi_activityevents\\\", JoinKind.LeftOuter),\\n    #\\\"Expanded pbi_activityevents\\\" = Table.ExpandTableColumn(#\\\"Merged Queries\\\", \\\"pbi_activityevents\\\", {\\\"reportname\\\", \\\"Views\\\", \\\"Views_90days\\\", \\\"Views_60days\\\", \\\"Views_30days\\\", \\\"Downloads\\\", \\\"Downloads_90days\\\", \\\"Downloads_60days\\\", \\\"Downloads_30days\\\", \\\"AnalyzeInExcel\\\"}, {\\\"reportname\\\", \\\"Views\\\", \\\"Views_90days\\\", \\\"Views_60days\\\", \\\"Views_30days\\\", \\\"Downloads\\\", \\\"Downloads_90days\\\", \\\"Downloads_60days\\\", \\\"Downloads_30days\\\", \\\"AnalyzeInExcel\\\"}),\\n    #\\\"Merged Queries2\\\" = Table.NestedJoin(#\\\"Expanded pbi_activityevents\\\", {\\\"DatasetId\\\"}, RelationCapacityGroupsDatasets, {\\\"DatasetId\\\"}, \\\"RelationCapacityGroupsDatasets\\\", JoinKind.LeftOuter),\\n    #\\\"Expanded RelationCapacityGroupsDatasets\\\" = Table.ExpandTableColumn(#\\\"Merged Queries2\\\", \\\"RelationCapacityGroupsDatasets\\\", {\\\"CapacityId\\\", \\\"CapacityName\\\",\\\"GroupId\\\",\\\"GroupName\\\"}, {\\\"CapacityId Of Dataset\\\", \\\"CapacityName Of Dataset\\\",\\\"GroupId Of Dataset\\\",\\\"GroupName of Dataset\\\"}),\\n    #\\\"Merged Queries3\\\" = Table.NestedJoin(#\\\"Expanded RelationCapacityGroupsDatasets\\\", {\\\"ReportId\\\"}, RelationCapacityGroupsReportsDatasets, {\\\"ReportId\\\"}, \\\"RelationCapacityGroupsReportsDatasets\\\", JoinKind.LeftOuter),\\n    #\\\"Expanded RelationCapacityGroupsReportsDatasets\\\" = Table.ExpandTableColumn(#\\\"Merged Queries3\\\", \\\"RelationCapacityGroupsReportsDatasets\\\", {\\\"CapacityId\\\", \\\"CapacityNameOfReport\\\",\\\"GroupId\\\",\\\"GroupName\\\",\\\"ReportName\\\"}, {\\\"CapacityId Of Report\\\", \\\"CapacityName Of Report\\\",\\\"GroupId of Report\\\",\\\"GroupName of Report\\\",\\\"ReportName\\\"}),\\n    #\\\"Replaced Value\\\" = Table.ReplaceValue(#\\\"Expanded RelationCapacityGroupsReportsDatasets\\\",null,0,Replacer.ReplaceValue,{\\\"Views\\\", \\\"Views_90days\\\", \\\"Views_60days\\\", \\\"Views_30days\\\", \\\"Downloads\\\", \\\"Downloads_90days\\\", \\\"Downloads_60days\\\", \\\"Downloads_30days\\\", \\\"AnalyzeInExcel\\\"}),\\n    #\\\"Replaced Value1\\\" = Table.ReplaceValue(#\\\"Replaced Value\\\",null,\\\"\\\",Replacer.ReplaceValue,{\\\"reportname\\\"}),\\n    #\\\"Added Custom\\\" = Table.AddColumn(#\\\"Replaced Value1\\\", \\\"Custom\\\", each [reportname] & [ReportName]),\\n    #\\\"Replaced Value2\\\" = Table.ReplaceValue(#\\\"Added Custom\\\",null,\\\"0\\\",Replacer.ReplaceValue,{\\\"Custom\\\"}),\\n    #\\\"Filtered Rows1\\\" = Table.SelectRows(#\\\"Replaced Value2\\\", each not Text.StartsWith([Custom], \\\"[App\\\")),\\n    #\\\"Changed Type\\\" = Table.TransformColumnTypes(#\\\"Filtered Rows1\\\",{{\\\"path\\\", type text}}),\\n    #\\\"Added Conditional Column\\\" = Table.AddColumn(#\\\"Changed Type\\\", \\\"Snowflake_URL\\\", each if [kind] = \\\"Snowflake\\\" then Text.BeforeDelimiter([path], \\\";\\\") else [url]),\\n    #\\\"Update URL\\\"= Table.ReplaceValue( #\\\"Added Conditional Column\\\" ,each [url],each if Text.Contains([kind], \\\"Snowflake\\\") then [Snowflake_URL] else [url],Replacer.ReplaceValue,{\\\"url\\\"}),\\n    #\\\"Filtered Rows\\\" = Table.SelectRows(#\\\"Update URL\\\", each true),\\n    #\\\"Added Custom1\\\" = Table.AddColumn(#\\\"Filtered Rows\\\", \\\"SnowflakeServerException\\\", each if [CapacityName] = \\\"BetMGM\\\" and [kind] = \\\"Snowflake\\\" and\\n   ( [url] = \\\"ucssray-edp_us_prod.snowflakecomputing.com\\\" or \\n     [url] = \\\"ucssray-edpusprod.snowflakecomputing.com\\\" or\\n     [url] = \\\"oe24878.us-central1.gcp.snowflakecomputing.com\\\" or\\n     [url] = \\\"ucssray-edp_us_dev.snowflakecomputing.com\\\" or\\n     [url] = \\\"ucssray-edpusdev.snowflakecomputing.com\\\" or\\n     [url] = \\\"so42871.us-central1.gcp.snowflakecomputing.com\\\" or \\n     [url] = \\\"ueb01410.us-east-1.snowflakecomputing.com\\\" or \\n     [url] = \\\"nyb97951.us-east-1.snowflakecomputing.com\\\" ) then \\n    true \\nelse if [CapacityName] <> \\\"BetMGM\\\" and \\n        ( [url] = \\\"entaindataplatform.eu-west-1.snowflakecomputing.com\\\" or \\n          [url] = \\\"pb01915.eu-west-1.snowflakecomputing.com\\\" or \\n          [url] = \\\"nn34832.eu-west-1.snowflakecomputing.com\\\" or \\n          [url] = \\\"so22763.eu-west-1.snowflakecomputing.com\\\" ) then \\n    true \\nelse \\n    false),\\n    #\\\"Changed Type1\\\" = Table.TransformColumnTypes(#\\\"Added Custom1\\\",{{\\\"SnowflakeServerException\\\", type logical}}),\\n    #\\\"Added Custom2\\\" = Table.AddColumn(#\\\"Changed Type1\\\", \\\"WebUrl\\\", each \\\"https://app.powerbi.com/groups/\\\" & [GroupId] & \\\"/datasets/\\\" & [DatasetId] & \\\"/details\\\"),\\n    #\\\"Filtered Rows2\\\" = Table.SelectRows(#\\\"Added Custom2\\\", each true)\\nin\\n    #\\\"Filtered Rows2\\\"\",\"ReferencedQueriesFormulaText\":{}}",
+      "loadAsTableDisabled": false,
+      "resultType": "Exception",
+      "isHidden": false
+    },
+    {
+      "name": "WS-Owners",
+      "lineageTag": "ae514777-818c-44a3-9a0f-c610d6cfe89e",
+      "text": [
+        "let",
+        "    Source = Excel.Workbook(Web.Contents(\"https://coralracing.sharepoint.com/sites/CentralPowerBI/Shared%20Documents/Documentation/List%20of%20Workspaces.xlsx\"), null, true),",
+        "    #\"WS-Owners_Sheet\" = Source{[Item=\"WS-Owners\",Kind=\"Sheet\"]}[Data],",
+        "    #\"Promoted Headers\" = Table.PromoteHeaders(#\"WS-Owners_Sheet\", [PromoteAllScalars=true]),",
+        "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"Owner\", type text}, {\"Sub-Owner\", type any}, {\"WorkspaceName\", type text}, {\"WorkspaceId\", type text}, {\"AppName\", type text}, {\"AppId\", type text}, {\"PII?\", Int64.Type}, {\"Test?\", Int64.Type}, {\"WorkspaceDeleted?\", Int64.Type}, {\"Comments\", type text}}),",
+        "    #\"Filtered Rows\" = Table.SelectRows(#\"Changed Type\", each ([WorkspaceName] <> null))",
+        "in",
+        "    #\"Filtered Rows\""
+      ],
+      "isDirectQuery": false,
+      "lastLoadedAsTableFormulaText": "{\"IncludesReferencedQueries\":false,\"RootFormulaText\":\"let\\n    Source = Excel.Workbook(Web.Contents(\\\"https://coralracing.sharepoint.com/sites/CentralPowerBI/Shared%20Documents/Documentation/List%20of%20Workspaces.xlsx\\\"), null, true),\\n    #\\\"WS-Owners_Sheet\\\" = Source{[Item=\\\"WS-Owners\\\",Kind=\\\"Sheet\\\"]}[Data],\\n    #\\\"Promoted Headers\\\" = Table.PromoteHeaders(#\\\"WS-Owners_Sheet\\\", [PromoteAllScalars=true]),\\n    #\\\"Changed Type\\\" = Table.TransformColumnTypes(#\\\"Promoted Headers\\\",{{\\\"Owner\\\", type text}, {\\\"Sub-Owner\\\", type any}, {\\\"WorkspaceName\\\", type text}, {\\\"WorkspaceId\\\", type text}, {\\\"AppName\\\", type text}, {\\\"AppId\\\", type text}, {\\\"PII?\\\", Int64.Type}, {\\\"Test?\\\", Int64.Type}, {\\\"WorkspaceDeleted?\\\", Int64.Type}, {\\\"Comments\\\", type text}}),\\n    #\\\"Filtered Rows\\\" = Table.SelectRows(#\\\"Changed Type\\\", each ([WorkspaceName] <> null))\\nin\\n    #\\\"Filtered Rows\\\"\",\"ReferencedQueriesFormulaText\":{}}",
+      "loadAsTableDisabled": false,
+      "resultType": "Table",
+      "isHidden": false
+    },
+    {
+      "name": "pbi_activityevents_Views",
+      "lineageTag": "d35d47ce-98e0-4fc0-b4df-20e7c7228a24",
+      "text": [
+        "let",
+        "    Source = Value.NativeQuery(Snowflake.Databases(Server,Warehouse,[Role=Role]){[Name=Database]}[Data], \"select #(lf)#(tab)distinct#(lf)        p.datasetid, p.datasetname,p.reportid,p.reportname #(lf)     ,count(case when p.activity = 'ViewReport' then 1 end) as Views#(lf)#(tab),count(case when datediff('day',TO_DATE(SUBSTR(creationtime,1,10)),current_date)<=90 and p.activity='ViewReport' then 1 end) as Views_90days#(lf)#(tab),count(case when datediff('day',TO_DATE(SUBSTR(creationtime,1,10)),current_date)<=60 and p.activity='ViewReport'  then 1 end) as Views_60days#(lf)#(tab),count(case when datediff('day',TO_DATE(SUBSTR(creationtime,1,10)),current_date)<=30 and p.activity='ViewReport'  then 1 end) as Views_30days#(lf)#(tab),count(case when p.activity = 'ExportReport' then 1 end) as Downloads#(lf)#(tab),count(case when datediff('day',TO_DATE(SUBSTR(creationtime,1,10)),current_date)<=90 and p.activity='ExportReport' then 1 end) as Downloads_90days#(lf)#(tab),count(case when datediff('day',TO_DATE(SUBSTR(creationtime,1,10)),current_date)<=60 and p.activity='ExportReport'  then 1 end) as Downloads_60days#(lf)#(tab),count(case when datediff('day',TO_DATE(SUBSTR(creationtime,1,10)),current_date)<=30 and p.activity='ExportReport'  then 1 end) as Downloads_30days#(lf)#(tab),count(case when p.activity = 'AnalyzeInExcel' then 1 end) as AnalyzeInExcel#(lf)from #(lf)#(tab)EDLRETAILVIEWSBI.pbi_activityevents p#(lf)where #(lf)  (p.capacityid <> '' and p.capacityid is NOT NULL)#(lf)#(tab)group by p.datasetid,p.datasetname,p.reportid,p.reportname\", null, [EnableFolding=true]),",
+        "    #\"Renamed Columns\" = Table.RenameColumns(Source,{{\"DATASETID\", \"datasetid\"}, {\"DATASETNAME\", \"datasetname\"}, {\"REPORTID\", \"reportid\"}, {\"REPORTNAME\", \"reportname\"}, {\"VIEWS\", \"Views\"}, {\"VIEWS_90DAYS\", \"Views_90days\"}, {\"VIEWS_60DAYS\", \"Views_60days\"}, {\"VIEWS_30DAYS\", \"Views_30days\"}, {\"DOWNLOADS\", \"Downloads\"}, {\"DOWNLOADS_90DAYS\", \"Downloads_90days\"}, {\"DOWNLOADS_60DAYS\", \"Downloads_60days\"}, {\"DOWNLOADS_30DAYS\", \"Downloads_30days\"}, {\"ANALYZEINEXCEL\", \"AnalyzeInExcel\"}})",
+        "in",
+        "    #\"Renamed Columns\""
+      ],
+      "loadAsTableDisabled": true,
+      "resultType": "Exception",
+      "isHidden": false
+    },
+    {
+      "name": "StartDate",
+      "lineageTag": "84e9f236-2f1a-4b16-8de0-47828906251c",
+      "text": [
+        "let",
+        " Source = Value.NativeQuery(Snowflake.Databases(Server,Warehouse,[Role=Role]){[Name=Database]}[Data], \"select year(current_date - interval '2 years')*10000 + month(current_date)*100 + 01\", null, [EnableFolding=true]),",
+        "    #\"Renamed Columns\" = Table.RenameColumns(Source,{{\"YEAR(CURRENT_DATE - INTERVAL '2 YEARS')*10000 + MONTH(CURRENT_DATE)*100 + 01\", \"_col0\"}}),",
+        "    _col0 = #\"Renamed Columns\"{0}[_col0]",
+        "in",
+        "    _col0"
+      ],
+      "loadAsTableDisabled": true,
+      "resultType": "Number",
+      "isHidden": false
+    },
+    {
+      "name": "EndDate",
+      "lineageTag": "4f61edc6-5c3a-4305-843b-bba20c656dc3",
+      "text": [
+        "let",
+        "    Source = Value.NativeQuery(Snowflake.Databases(Server,Warehouse,[Role=Role]){[Name=Database]}[Data], \"select current_date\", null, [EnableFolding=true]),",
+        "    #\"Renamed Columns\" = Table.RenameColumns(Source,{{\"CURRENT_DATE\", \"_col0\"}}),",
+        "    _col0 = #\"Renamed Columns\"{0}[_col0]",
+        "in",
+        "    _col0"
+      ],
+      "loadAsTableDisabled": true,
+      "resultType": "Date",
+      "isHidden": false
+    },
+    {
+      "name": "RelationCapacityGroupsReportsDatasets",
+      "lineageTag": "ae908757-bc16-434f-be8a-4f63631256da",
+      "text": [
+        "let",
+        "    Source = PowerPlatform.Dataflows(null),",
+        "    Workspaces = Source{[Id=\"Workspaces\"]}[Data],",
+        "    #\"b1189a55-d3ea-4ceb-8dd9-994de230fca3\" = Workspaces{[workspaceId=\"b1189a55-d3ea-4ceb-8dd9-994de230fca3\"]}[Data],",
+        "    #\"72d38d67-1c11-412c-98df-4ebbd50bcc7b\" = #\"b1189a55-d3ea-4ceb-8dd9-994de230fca3\"{[dataflowId=\"72d38d67-1c11-412c-98df-4ebbd50bcc7b\"]}[Data],",
+        "    RelationCapacityGroupsReports = #\"72d38d67-1c11-412c-98df-4ebbd50bcc7b\"{[entity=\"RelationCapacityGroupsReports\",version=\"\"]}[Data],",
+        "    #\"Lowercased Text\" = Table.TransformColumns(RelationCapacityGroupsReports,{{\"ReportId\", Text.Lower, type text}}),",
+        "    #\"Removed Other Columns\" = Table.SelectColumns(#\"Lowercased Text\",{\"isReadOnly\", \"CapacityId\", \"CapacityNameOfReport\", \"GroupId\", \"GroupName\", \"ReportId\", \"ReportName\"}),",
+        "    #\"Removed Duplicates\" = Table.Distinct(#\"Removed Other Columns\", {\"ReportId\"}),",
+        "    #\"Removed Columns\" = Table.RemoveColumns(#\"Removed Duplicates\",{\"isReadOnly\"})",
+        "in",
+        "    #\"Removed Columns\""
+      ],
+      "loadAsTableDisabled": true,
+      "resultType": "Table",
+      "isHidden": false
+    },
+    {
+      "name": "RelationCapacityGroupsReports",
+      "lineageTag": "b8a7ab71-9f81-421c-a43c-67db85e00e00",
+      "text": [
+        "let",
+        "    Source = PowerPlatform.Dataflows(null),",
+        "    Workspaces = Source{[Id=\"Workspaces\"]}[Data],",
+        "    #\"b1189a55-d3ea-4ceb-8dd9-994de230fca3\" = Workspaces{[workspaceId=\"b1189a55-d3ea-4ceb-8dd9-994de230fca3\"]}[Data],",
+        "    #\"72d38d67-1c11-412c-98df-4ebbd50bcc7b\" = #\"b1189a55-d3ea-4ceb-8dd9-994de230fca3\"{[dataflowId=\"72d38d67-1c11-412c-98df-4ebbd50bcc7b\"]}[Data],",
+        "    RelationCapacityGroupsReports = #\"72d38d67-1c11-412c-98df-4ebbd50bcc7b\"{[entity=\"RelationCapacityGroupsReports\",version=\"\"]}[Data],",
+        "    #\"Removed Other Columns\" = Table.SelectColumns(RelationCapacityGroupsReports,{\"isReadOnly\", \"ReportId\", \"DatasetId\"}),",
+        "    #\"Removed Columns\" = Table.RemoveColumns(#\"Removed Other Columns\",{\"isReadOnly\"}),",
+        "    #\"Lowercased Text\" = Table.TransformColumns(#\"Removed Columns\",{{\"ReportId\", Text.Lower, type text}})",
+        "in",
+        "    #\"Lowercased Text\""
+      ],
+      "loadAsTableDisabled": true,
+      "resultType": "Table",
+      "isHidden": false
+    },
+    {
+      "name": "RelationCapacityGroupsDatasets",
+      "lineageTag": "07c8b08b-dac4-4050-a1b7-d6b7ff4ec113",
+      "text": [
+        "let",
+        "    Source = PowerPlatform.Dataflows(null),",
+        "    Workspaces = Source{[Id=\"Workspaces\"]}[Data],",
+        "    #\"b1189a55-d3ea-4ceb-8dd9-994de230fca3\" = Workspaces{[workspaceId=\"b1189a55-d3ea-4ceb-8dd9-994de230fca3\"]}[Data],",
+        "    #\"72d38d67-1c11-412c-98df-4ebbd50bcc7b\" = #\"b1189a55-d3ea-4ceb-8dd9-994de230fca3\"{[dataflowId=\"72d38d67-1c11-412c-98df-4ebbd50bcc7b\"]}[Data],",
+        "    RelationCapacityGroupsDatasets = #\"72d38d67-1c11-412c-98df-4ebbd50bcc7b\"{[entity=\"RelationCapacityGroupsDatasets\",version=\"\"]}[Data],",
+        "    #\"Removed Other Columns\" = Table.SelectColumns(RelationCapacityGroupsDatasets,{\"CapacityId\", \"CapacityName\", \"GroupId\", \"GroupName\", \"DatasetId\", \"DatasetName\"}),",
+        "    #\"Filtered Rows\" = Table.SelectRows(#\"Removed Other Columns\", each ([DatasetId] <> \"\")),",
+        "    #\"Removed Duplicates\" = Table.Distinct(#\"Filtered Rows\", {\"DatasetId\"})",
+        "in",
+        "    #\"Removed Duplicates\""
+      ],
+      "loadAsTableDisabled": true,
+      "resultType": "Table",
+      "isHidden": false
+    },
+    {
+      "name": "GatewayConnectors",
+      "lineageTag": "7e06c9b9-6068-45ce-94d4-78b963ab1ec6",
+      "text": [
+        "let",
+        "    Source = PowerPlatform.Dataflows(null),",
+        "    Workspaces = Source{[Id=\"Workspaces\"]}[Data],",
+        "    #\"6c3250c1-cd1a-4bb8-acb7-0518bc2c8151\" = Workspaces{[workspaceId=\"6c3250c1-cd1a-4bb8-acb7-0518bc2c8151\"]}[Data],",
+        "    #\"c55614e1-8234-4ef9-827e-cdf18b4a0cb8\" = #\"6c3250c1-cd1a-4bb8-acb7-0518bc2c8151\"{[dataflowId=\"c55614e1-8234-4ef9-827e-cdf18b4a0cb8\"]}[Data],",
+        "    GatewayConnectors_ = #\"c55614e1-8234-4ef9-827e-cdf18b4a0cb8\"{[entity=\"GatewayConnectors\",version=\"\"]}[Data],",
+        "    #\"Merged Queries\" = Table.NestedJoin(GatewayConnectors_, {\"GatewayId\"}, Gateways, {\"GatewayID\"}, \"Gateways\", JoinKind.LeftOuter),",
+        "    #\"Expanded Gateways\" = Table.ExpandTableColumn(#\"Merged Queries\", \"Gateways\", {\"VM ID\", \"VM Name\", \"Notes\"}, {\"VM ID\", \"VM Name\", \"Notes\"})",
+        "in",
+        "    #\"Expanded Gateways\""
+      ],
+      "isDirectQuery": false,
+      "lastLoadedAsTableFormulaText": "{\"IncludesReferencedQueries\":false,\"RootFormulaText\":\"let\\n    Source = PowerPlatform.Dataflows(null),\\n    Workspaces = Source{[Id=\\\"Workspaces\\\"]}[Data],\\n    #\\\"6c3250c1-cd1a-4bb8-acb7-0518bc2c8151\\\" = Workspaces{[workspaceId=\\\"6c3250c1-cd1a-4bb8-acb7-0518bc2c8151\\\"]}[Data],\\n    #\\\"c55614e1-8234-4ef9-827e-cdf18b4a0cb8\\\" = #\\\"6c3250c1-cd1a-4bb8-acb7-0518bc2c8151\\\"{[dataflowId=\\\"c55614e1-8234-4ef9-827e-cdf18b4a0cb8\\\"]}[Data],\\n    GatewayConnectors_ = #\\\"c55614e1-8234-4ef9-827e-cdf18b4a0cb8\\\"{[entity=\\\"GatewayConnectors\\\",version=\\\"\\\"]}[Data],\\n    #\\\"Merged Queries\\\" = Table.NestedJoin(GatewayConnectors_, {\\\"GatewayId\\\"}, Gateways, {\\\"GatewayID\\\"}, \\\"Gateways\\\", JoinKind.LeftOuter),\\n    #\\\"Expanded Gateways\\\" = Table.ExpandTableColumn(#\\\"Merged Queries\\\", \\\"Gateways\\\", {\\\"VM ID\\\", \\\"VM Name\\\", \\\"Notes\\\"}, {\\\"VM ID\\\", \\\"VM Name\\\", \\\"Notes\\\"})\\nin\\n    #\\\"Expanded Gateways\\\"\",\"ReferencedQueriesFormulaText\":{}}",
+      "loadAsTableDisabled": false,
+      "resultType": "Table",
+      "isHidden": false
+    },
+    {
+      "name": "ConnectorDetails",
+      "lineageTag": "42c14531-5bd2-46e1-a68b-6cfb4a0e177b",
+      "text": [
+        "let",
+        "    Source = PowerPlatform.Dataflows(null),",
+        "    Workspaces = Source{[Id=\"Workspaces\"]}[Data],",
+        "    #\"6c3250c1-cd1a-4bb8-acb7-0518bc2c8151\" = Workspaces{[workspaceId=\"6c3250c1-cd1a-4bb8-acb7-0518bc2c8151\"]}[Data],",
+        "    #\"c55614e1-8234-4ef9-827e-cdf18b4a0cb8\" = #\"6c3250c1-cd1a-4bb8-acb7-0518bc2c8151\"{[dataflowId=\"c55614e1-8234-4ef9-827e-cdf18b4a0cb8\"]}[Data],",
+        "    GatewayConnectors_ = #\"c55614e1-8234-4ef9-827e-cdf18b4a0cb8\"{[entity=\"GatewayConnectors\",version=\"\"]}[Data],",
+        "    #\"Merged Queries\" = Table.NestedJoin(GatewayConnectors_, {\"DataSourceId\"}, DataSourcesByDatasetId, {\"datasourceId\"}, \"DataSourcesByDatasetId\", JoinKind.LeftOuter),",
+        "    #\"Expanded DataSourcesByDatasetId\" = Table.ExpandTableColumn(#\"Merged Queries\", \"DataSourcesByDatasetId\", {\"DatasetId\", \"DatasetName\", \"Views\", \"Views_90days\", \"Views_60days\", \"Views_30days\"}, {\"DatasetId\", \"DatasetName\", \"Views\", \"Views_90days\", \"Views_60days\", \"Views_30days\"}),",
+        "    #\"Merged Queries1\" = Table.NestedJoin(#\"Expanded DataSourcesByDatasetId\", {\"GatewayId\"}, Gateways, {\"GatewayID\"}, \"Gateways\", JoinKind.LeftOuter),",
+        "    #\"Expanded Gateways\" = Table.ExpandTableColumn(#\"Merged Queries1\", \"Gateways\", {\"VM ID\", \"VM Name\", \"Notes\"}, {\"VM ID\", \"VM Name\", \"Notes\"})",
+        "in",
+        "    #\"Expanded Gateways\""
+      ],
+      "isDirectQuery": false,
+      "lastLoadedAsTableFormulaText": "{\"IncludesReferencedQueries\":false,\"RootFormulaText\":\"let\\n    Source = PowerPlatform.Dataflows(null),\\n    Workspaces = Source{[Id=\\\"Workspaces\\\"]}[Data],\\n    #\\\"6c3250c1-cd1a-4bb8-acb7-0518bc2c8151\\\" = Workspaces{[workspaceId=\\\"6c3250c1-cd1a-4bb8-acb7-0518bc2c8151\\\"]}[Data],\\n    #\\\"c55614e1-8234-4ef9-827e-cdf18b4a0cb8\\\" = #\\\"6c3250c1-cd1a-4bb8-acb7-0518bc2c8151\\\"{[dataflowId=\\\"c55614e1-8234-4ef9-827e-cdf18b4a0cb8\\\"]}[Data],\\n    GatewayConnectors_ = #\\\"c55614e1-8234-4ef9-827e-cdf18b4a0cb8\\\"{[entity=\\\"GatewayConnectors\\\",version=\\\"\\\"]}[Data],\\n    #\\\"Merged Queries\\\" = Table.NestedJoin(GatewayConnectors_, {\\\"DataSourceId\\\"}, DataSourcesByDatasetId, {\\\"datasourceId\\\"}, \\\"DataSourcesByDatasetId\\\", JoinKind.LeftOuter),\\n    #\\\"Expanded DataSourcesByDatasetId\\\" = Table.ExpandTableColumn(#\\\"Merged Queries\\\", \\\"DataSourcesByDatasetId\\\", {\\\"DatasetId\\\", \\\"DatasetName\\\", \\\"Views\\\", \\\"Views_90days\\\", \\\"Views_60days\\\", \\\"Views_30days\\\"}, {\\\"DatasetId\\\", \\\"DatasetName\\\", \\\"Views\\\", \\\"Views_90days\\\", \\\"Views_60days\\\", \\\"Views_30days\\\"}),\\n    #\\\"Merged Queries1\\\" = Table.NestedJoin(#\\\"Expanded DataSourcesByDatasetId\\\", {\\\"GatewayId\\\"}, Gateways, {\\\"GatewayID\\\"}, \\\"Gateways\\\", JoinKind.LeftOuter),\\n    #\\\"Expanded Gateways\\\" = Table.ExpandTableColumn(#\\\"Merged Queries1\\\", \\\"Gateways\\\", {\\\"VM ID\\\", \\\"VM Name\\\", \\\"Notes\\\"}, {\\\"VM ID\\\", \\\"VM Name\\\", \\\"Notes\\\"})\\nin\\n    #\\\"Expanded Gateways\\\"\",\"ReferencedQueriesFormulaText\":{}}",
+      "loadAsTableDisabled": false,
+      "resultType": "Table",
+      "isHidden": false
+    },
+    {
+      "name": "Gateways",
+      "lineageTag": "052cefd3-6103-4e95-bf7c-327021507bdc",
+      "text": [
+        "let",
+        "    Source = Excel.Workbook(Web.Contents(\"https://coralracing.sharepoint.com/sites/CentralPowerBI/Shared%20Documents/PBI%20Reports/Power%20BI%20-%20Info/DataSources/Gateways%20and%20VM's.xlsx\"), null, true),",
+        "    Sheet1_Sheet = Source{[Item=\"Sheet1\",Kind=\"Sheet\"]}[Data],",
+        "    #\"Changed Type\" = Table.TransformColumnTypes(Sheet1_Sheet,{{\"Column1\", type text}, {\"Column2\", type text}, {\"Column3\", type text}, {\"Column4\", type text}, {\"Column5\", type text}}),",
+        "    #\"Promoted Headers\" = Table.PromoteHeaders(#\"Changed Type\", [PromoteAllScalars=true]),",
+        "    #\"Changed Type1\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"GatewayID\", type text}, {\"GatewayName\", type text}, {\"VM ID\", type text}, {\"VM Name\", type text}, {\"Notes\", type text}})",
+        "in",
+        "    #\"Changed Type1\""
+      ],
+      "isDirectQuery": false,
+      "lastLoadedAsTableFormulaText": "{\"IncludesReferencedQueries\":false,\"RootFormulaText\":\"let\\n    Source = Excel.Workbook(Web.Contents(\\\"https://coralracing.sharepoint.com/sites/CentralPowerBI/Shared%20Documents/PBI%20Reports/Power%20BI%20-%20Info/DataSources/Gateways%20and%20VM's.xlsx\\\"), null, true),\\n    Sheet1_Sheet = Source{[Item=\\\"Sheet1\\\",Kind=\\\"Sheet\\\"]}[Data],\\n    #\\\"Changed Type\\\" = Table.TransformColumnTypes(Sheet1_Sheet,{{\\\"Column1\\\", type text}, {\\\"Column2\\\", type text}, {\\\"Column3\\\", type text}, {\\\"Column4\\\", type text}, {\\\"Column5\\\", type text}}),\\n    #\\\"Promoted Headers\\\" = Table.PromoteHeaders(#\\\"Changed Type\\\", [PromoteAllScalars=true]),\\n    #\\\"Changed Type1\\\" = Table.TransformColumnTypes(#\\\"Promoted Headers\\\",{{\\\"GatewayID\\\", type text}, {\\\"GatewayName\\\", type text}, {\\\"VM ID\\\", type text}, {\\\"VM Name\\\", type text}, {\\\"Notes\\\", type text}})\\nin\\n    #\\\"Changed Type1\\\"\",\"ReferencedQueriesFormulaText\":{}}",
+      "loadAsTableDisabled": false,
+      "resultType": "Table",
+      "isHidden": false
+    },
+    {
+      "name": "DataSourcesByDatasetId - Dev Digital_Retail",
+      "lineageTag": "1e5d6ff8-1dd4-4c59-aa78-51d5e1b37172",
+      "queryGroupId": "5148cc2b-7679-4959-a06c-b240d156f39c",
+      "text": [
+        "let",
+        "    Source = PowerPlatform.Dataflows(null),",
+        "    Workspaces = Source{[Id=\"Workspaces\"]}[Data],",
+        "    #\"6c3250c1-cd1a-4bb8-acb7-0518bc2c8151\" = Workspaces{[workspaceId=\"6c3250c1-cd1a-4bb8-acb7-0518bc2c8151\"]}[Data],",
+        "    #\"b291c479-c34d-4060-984c-5ad4971bb432\" = #\"6c3250c1-cd1a-4bb8-acb7-0518bc2c8151\"{[dataflowId=\"4e78bfa8-0547-430b-8daf-bebdd8743119\"]}[Data],",
+        "    #\"DataSourcesByDatasetId - BetMGM_\" = #\"b291c479-c34d-4060-984c-5ad4971bb432\"{[entity=\"DataSourcesByDatasetId - Digital\",version=\"\"]}[Data]",
+        "in",
+        "    #\"DataSourcesByDatasetId - BetMGM_\""
+      ],
+      "loadAsTableDisabled": true,
+      "resultType": "Table",
+      "isHidden": false
+    },
+    {
+      "name": "Server",
+      "lineageTag": "2ada685a-b30a-4043-a2bc-63c01dcfcda8",
+      "queryGroupId": "90d6048d-a0c7-4a82-b134-387509c068fd",
+      "text": [
+        "\"entaindataplatform.eu-west-1.snowflakecomputing.com\" meta [IsParameterQuery = true, IsParameterQueryRequired = true, Type = \"Text\"]"
+      ],
+      "loadAsTableDisabled": true,
+      "resultType": "Text",
+      "isHidden": false
+    },
+    {
+      "name": "Warehouse",
+      "lineageTag": "411a7418-6203-466b-9388-8b5dfd16c52c",
+      "queryGroupId": "90d6048d-a0c7-4a82-b134-387509c068fd",
+      "navigationStepName": "Navigation",
+      "text": [
+        "\"WH_RTL_SUMM_PBI\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]"
+      ],
+      "loadAsTableDisabled": true,
+      "resultType": "Text",
+      "isHidden": false
+    },
+    {
+      "name": "Role",
+      "lineageTag": "8b6e5ad0-2296-4bfc-8d58-8a396317f62f",
+      "queryGroupId": "90d6048d-a0c7-4a82-b134-387509c068fd",
+      "navigationStepName": "Navigation",
+      "text": [
+        "\"RL_RETAIL_PRODRPT_VH_R\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]"
+      ],
+      "loadAsTableDisabled": true,
+      "resultType": "Text",
+      "isHidden": false
+    },
+    {
+      "name": "Database",
+      "lineageTag": "0ce0cac2-a963-4276-a73a-6191a19c9bc7",
+      "queryGroupId": "90d6048d-a0c7-4a82-b134-387509c068fd",
+      "navigationStepName": "Navigation",
+      "text": [
+        "\"EDLRETAILVIEWS\" meta [IsParameterQuery = true, IsParameterQueryRequired = true, Type = \"Text\"]"
+      ],
+      "loadAsTableDisabled": true,
+      "resultType": "Text",
+      "isHidden": false
+    }
+  ],
+  "queryGroups": [
+    {
+      "name": "Not Loading",
+      "id": "5148cc2b-7679-4959-a06c-b240d156f39c",
+      "description": ""
+    },
+    {
+      "name": "Parameters",
+      "id": "90d6048d-a0c7-4a82-b134-387509c068fd",
+      "order": 1,
+      "description": ""
+    }
+  ],
+  "culture": "en-GB",
+  "firewallEnabled": true
+}

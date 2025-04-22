@@ -1,0 +1,8 @@
+relationship 9be9832d-cfd5-47ed-a392-e5ada8a71903
+	fromColumn: DataSourcesByDatasetId.GroupId
+	toColumn: WS-Owners.WorkspaceId
+
+relationship c5f5e85a-4909-4c4d-ad9e-13c08e47e149
+	fromColumn: DataSourcesByDatasetId.datasourceId
+	toColumn: GatewayConnectors.DataSourceId
+

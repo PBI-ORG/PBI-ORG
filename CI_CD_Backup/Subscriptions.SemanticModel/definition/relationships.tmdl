@@ -1,0 +1,23 @@
+relationship 4d95f995-09b3-47d0-8f28-1b76ac5e1ef9
+	fromColumn: pbi_activityevents.CreationDate
+	toColumn: dim_date.Date
+
+relationship 7e9a78e8-646f-4e7e-a0e0-a522237b60dc
+	fromColumn: pbi_activityevents.'Artifact ID'
+	toColumn: Artifacts.ArtifactId
+
+relationship cc500f8f-10da-4b18-8028-2c3aa36c5ea9
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: dim_date.Index
+	toColumn: RelationCapacityGroupsReports.Index
+
+relationship 609cd8a8-cc1e-4f1a-a5cf-9a7287370b88
+	isActive: false
+	fromColumn: Artifacts.Index
+	toColumn: RelationCapacityGroupsReports.Index
+
+relationship 4534c494-eb59-49a1-af0b-7f630a9c8973
+	fromColumn: pbi_activityevents.workspaceid
+	toColumn: WS-Owners.WorkspaceId
+

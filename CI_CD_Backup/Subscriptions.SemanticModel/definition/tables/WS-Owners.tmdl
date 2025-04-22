@@ -1,0 +1,100 @@
+table WS-Owners
+	lineageTag: fdf4a3ba-a5ab-40a8-912d-19a9b7af5afc
+
+	column Owner
+		dataType: string
+		lineageTag: 8f3f6240-d7a8-4b89-bbd8-3c39f5343569
+		summarizeBy: none
+		sourceColumn: Owner
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sub-Owner
+		dataType: string
+		lineageTag: 3516b661-911d-4893-bdb6-47158de3eeb1
+		summarizeBy: none
+		sourceColumn: Sub-Owner
+
+		annotation SummarizationSetBy = Automatic
+
+	column WorkspaceName
+		dataType: string
+		lineageTag: 034d0930-fd77-4d0d-9326-76214edf7085
+		summarizeBy: none
+		sourceColumn: WorkspaceName
+
+		annotation SummarizationSetBy = Automatic
+
+	column WorkspaceId
+		dataType: string
+		lineageTag: 34137fbd-50f7-4cd3-956e-72620b31df76
+		summarizeBy: none
+		sourceColumn: WorkspaceId
+
+		annotation SummarizationSetBy = Automatic
+
+	column AppName
+		dataType: string
+		lineageTag: aa9c1189-5c54-4ee8-aca4-09dfbb30826b
+		summarizeBy: none
+		sourceColumn: AppName
+
+		annotation SummarizationSetBy = Automatic
+
+	column AppId
+		dataType: string
+		lineageTag: c362d1ed-a072-4f6b-acaa-fe03633530d1
+		summarizeBy: none
+		sourceColumn: AppId
+
+		annotation SummarizationSetBy = Automatic
+
+	column PII?
+		dataType: int64
+		formatString: 0
+		lineageTag: af05c977-cfa9-4b9c-8873-12abdb202af7
+		summarizeBy: none
+		sourceColumn: PII?
+
+		annotation SummarizationSetBy = Automatic
+
+	column Test?
+		dataType: int64
+		formatString: 0
+		lineageTag: 76ecf6ae-bd37-40fe-bac2-0d700c954060
+		summarizeBy: none
+		sourceColumn: Test?
+
+		annotation SummarizationSetBy = Automatic
+
+	column WorkspaceDeleted?
+		dataType: int64
+		formatString: 0
+		lineageTag: 4cf169e2-e009-4774-9034-00edabf2a0b4
+		summarizeBy: none
+		sourceColumn: WorkspaceDeleted?
+
+		annotation SummarizationSetBy = Automatic
+
+	column Comments
+		dataType: string
+		lineageTag: de8eb490-f55f-4aab-b90f-d6446023b6b7
+		summarizeBy: none
+		sourceColumn: Comments
+
+		annotation SummarizationSetBy = Automatic
+
+	partition WS-Owners-3e9bf036-67b5-4539-a68f-1ce20ae46588 = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(Web.Contents("https://coralracing.sharepoint.com/sites/CentralPowerBI/Shared%20Documents/Documentation/List%20of%20Workspaces.xlsx"), null, true),
+				    #"WS-Owners_Sheet" = Source{[Item="WS-Owners",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(#"WS-Owners_Sheet", [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Owner", type text}, {"Sub-Owner", type any}, {"WorkspaceName", type text}, {"WorkspaceId", type text}, {"AppName", type text}, {"AppId", type text}, {"PII?", Int64.Type}, {"Test?", Int64.Type}, {"WorkspaceDeleted?", Int64.Type}, {"Comments", type text}}),
+				    #"Filtered Rows" = Table.SelectRows(#"Changed Type", each ([WorkspaceName] <> null))
+				in
+				    #"Filtered Rows"
+
+	annotation PBI_ResultType = Table
+

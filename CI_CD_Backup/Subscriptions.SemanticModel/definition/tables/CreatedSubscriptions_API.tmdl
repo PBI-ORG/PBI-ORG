@@ -1,0 +1,226 @@
+table CreatedSubscriptions_API
+	lineageTag: ca36842c-b273-4e3b-bf26-2d9d4f4391f3
+
+	column Running
+		dataType: int64
+		formatString: 0
+		lineageTag: 1aa82e66-33e5-418c-a76d-bcae99022137
+		summarizeBy: sum
+		sourceColumn: Running
+
+		annotation SummarizationSetBy = Automatic
+
+	column id
+		dataType: string
+		lineageTag: d25e211c-879b-4178-a4a2-63715e2d7a1e
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column title
+		dataType: string
+		lineageTag: 8032b5d2-a0e7-4b79-83d5-94d1bf85777d
+		summarizeBy: none
+		sourceColumn: title
+
+		annotation SummarizationSetBy = Automatic
+
+	column artifactId
+		dataType: string
+		lineageTag: ccd36188-7771-4108-b543-c902aa5bb8a2
+		summarizeBy: none
+		sourceColumn: artifactId
+
+		annotation SummarizationSetBy = Automatic
+
+	column artifactDisplayName
+		dataType: string
+		lineageTag: f4787ebf-8bb3-47ae-916b-532101d39515
+		summarizeBy: none
+		sourceColumn: artifactDisplayName
+
+		annotation SummarizationSetBy = Automatic
+
+	column subArtifactDisplayName
+		dataType: string
+		lineageTag: 116bbfdb-c410-4209-b0ce-99b044c38326
+		summarizeBy: none
+		sourceColumn: subArtifactDisplayName
+
+		annotation SummarizationSetBy = Automatic
+
+	column artifactType
+		dataType: string
+		lineageTag: 576ba8c2-4e24-468e-88ca-bf5df848e042
+		summarizeBy: none
+		sourceColumn: artifactType
+
+		annotation SummarizationSetBy = Automatic
+
+	column isEnabled
+		dataType: string
+		lineageTag: 16194670-2a1c-498f-90e7-a425d5f80915
+		summarizeBy: none
+		sourceColumn: isEnabled
+
+		annotation SummarizationSetBy = Automatic
+
+	column frequency
+		dataType: string
+		lineageTag: a9a64f72-b9a2-40b4-a20e-624f1b2d5a30
+		summarizeBy: none
+		sourceColumn: frequency
+
+		annotation SummarizationSetBy = Automatic
+
+	column startDate
+		dataType: dateTime
+		formatString: dd/mm/yyyy
+		lineageTag: 9402a098-fdd7-40c3-b13e-bb69d20d0df9
+		summarizeBy: none
+		sourceColumn: startDate
+
+		changedProperty = DataType
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column endDate
+		dataType: dateTime
+		formatString: dd/mm/yyyy
+		lineageTag: 158a15ea-2498-4b4c-80f7-72f3c18d6111
+		summarizeBy: none
+		sourceColumn: endDate
+
+		changedProperty = DataType
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column linkToContent
+		dataType: string
+		lineageTag: e2c0d20d-8ba5-4b65-8746-a47699e59f40
+		summarizeBy: none
+		sourceColumn: linkToContent
+
+		annotation SummarizationSetBy = Automatic
+
+	column attachmentFormat
+		dataType: string
+		lineageTag: 3850a7f8-ed8b-4be4-ac9f-12b4494908cf
+		summarizeBy: none
+		sourceColumn: attachmentFormat
+
+		annotation SummarizationSetBy = Automatic
+
+	column emailAddress
+		dataType: string
+		lineageTag: b1c7bda1-359e-4f80-a23a-0ec6fb09a36e
+		summarizeBy: none
+		sourceColumn: emailAddress
+
+		annotation SummarizationSetBy = Automatic
+
+	column displayName
+		dataType: string
+		lineageTag: 0126fde7-0239-43d7-9c84-4480c310cc0c
+		summarizeBy: none
+		sourceColumn: displayName
+
+		annotation SummarizationSetBy = Automatic
+
+	column identifier
+		dataType: string
+		lineageTag: e8c4fa63-a92f-41ce-b8d5-48ccf6822bf5
+		summarizeBy: none
+		sourceColumn: identifier
+
+		annotation SummarizationSetBy = Automatic
+
+	column graphId
+		dataType: string
+		lineageTag: 1dde3479-2190-47c7-92ac-9c2ed3dcdc95
+		summarizeBy: none
+		sourceColumn: graphId
+
+		annotation SummarizationSetBy = Automatic
+
+	column principalType
+		dataType: string
+		lineageTag: 55988cd5-bf29-414f-9e22-92d3669ea09a
+		summarizeBy: none
+		sourceColumn: principalType
+
+		annotation SummarizationSetBy = Automatic
+
+	column userType
+		dataType: string
+		lineageTag: bcde9105-a939-4548-8e8f-c381bd1e0a29
+		summarizeBy: none
+		sourceColumn: userType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'startDate Month Year'
+		dataType: dateTime
+		formatString: mmmm yyyy
+		lineageTag: a7daf04b-cd89-4f2b-a185-97cc7e628346
+		summarizeBy: none
+		sourceColumn: startDate Month Year
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column CapacityNameOfReport
+		dataType: string
+		lineageTag: 839d99bf-f53a-4f22-8dc7-b8bb17db2e61
+		summarizeBy: none
+		sourceColumn: CapacityNameOfReport
+
+		annotation SummarizationSetBy = Automatic
+
+	column GroupName
+		dataType: string
+		lineageTag: 1a7d2c73-079c-40f5-b205-be9f33bdd3d5
+		summarizeBy: none
+		sourceColumn: GroupName
+
+		annotation SummarizationSetBy = Automatic
+
+	partition CreatedSubscriptions_API-f856bee3-1586-4caf-b93f-015aa0a9b8c8 = m
+		mode: import
+		source =
+				let
+				    Source = PowerPlatform.Dataflows(null),
+				    Workspaces = Source{[Id="Workspaces"]}[Data],
+				    #"67b30d52-a708-4f02-bc83-750583092f92" = Workspaces{[workspaceId="6c3250c1-cd1a-4bb8-acb7-0518bc2c8151"]}[Data],
+				    #"20c54b82-eece-4d82-829e-59b57bbc109f" = #"67b30d52-a708-4f02-bc83-750583092f92"{[dataflowId="db892311-e2ae-4eb1-992b-bdaf6382293f"]}[Data],
+				    CreatedSubscriptionsByReportId_ = #"20c54b82-eece-4d82-829e-59b57bbc109f"{[entity="CreatedSubscriptionsByReportId",version=""]}[Data],
+				    #"Appended Query" = Table.Combine({CreatedSubscriptionsByReportId_, CreatedSubscriptionsByDashboard_API}),
+				    #"Duplicated Column" = Table.DuplicateColumn(#"Appended Query", "startDate", "startDate - Copy"),
+				    #"Renamed Columns" = Table.RenameColumns(#"Duplicated Column",{{"startDate - Copy", "startDate Month Year"}}),
+				    #"Merged Queries" = Table.NestedJoin(#"Renamed Columns", {"artifactId"}, RelationCapacityGroupsReports, {"ReportId"}, "RelationCapacityGroupsReports", JoinKind.LeftOuter),
+				    #"Expanded RelationCapacityGroupsReports" = Table.ExpandTableColumn(#"Merged Queries", "RelationCapacityGroupsReports", {"CapacityNameOfReport", "GroupName"}, {"CapacityNameOfReport", "GroupName"})
+				in
+				    #"Expanded RelationCapacityGroupsReports"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

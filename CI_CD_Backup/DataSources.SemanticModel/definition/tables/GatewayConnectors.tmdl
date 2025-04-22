@@ -1,0 +1,141 @@
+table GatewayConnectors
+	lineageTag: 7e06c9b9-6068-45ce-94d4-78b963ab1ec6
+
+	column GatewayId
+		dataType: string
+		lineageTag: de0f3a6e-639f-4bb1-912f-21aa36b878ad
+		summarizeBy: none
+		sourceColumn: GatewayId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ClusterGatewayId
+		dataType: string
+		lineageTag: 9c383de9-2ee5-4bc0-a450-d4850bc3e657
+		summarizeBy: none
+		sourceColumn: ClusterGatewayId
+
+		annotation SummarizationSetBy = Automatic
+
+	column name
+		dataType: string
+		lineageTag: 643906ea-7b0f-4e3e-89c8-bd7be56b1de1
+		summarizeBy: none
+		sourceColumn: name
+
+		annotation SummarizationSetBy = Automatic
+
+	column type
+		dataType: string
+		lineageTag: a747433e-10db-4a46-bf5b-b04eb5b863b8
+		summarizeBy: none
+		sourceColumn: type
+
+		annotation SummarizationSetBy = Automatic
+
+	column gatewayAnnotation
+		dataType: string
+		lineageTag: 12b2e490-578f-41dd-9e7f-83c2964616bf
+		summarizeBy: none
+		sourceColumn: gatewayAnnotation
+
+		annotation SummarizationSetBy = Automatic
+
+	column DataSourceId
+		dataType: string
+		lineageTag: 3c8a3c3c-7f9c-47ea-9334-2583dea3c377
+		summarizeBy: none
+		sourceColumn: DataSourceId
+
+		annotation SummarizationSetBy = Automatic
+
+	column datasourceType
+		dataType: string
+		lineageTag: c7dfeb1a-fdcc-4934-81ee-64a0563f218a
+		summarizeBy: none
+		sourceColumn: datasourceType
+
+		annotation SummarizationSetBy = Automatic
+
+	column connectionDetails
+		dataType: string
+		lineageTag: 0f6cb10f-0afd-41ad-968e-0f327b2f6026
+		summarizeBy: none
+		sourceColumn: connectionDetails
+
+		annotation SummarizationSetBy = Automatic
+
+	column credentialType
+		dataType: string
+		lineageTag: ab9ceb88-35e3-48c3-855d-7aca490e74fb
+		summarizeBy: none
+		sourceColumn: credentialType
+
+		annotation SummarizationSetBy = Automatic
+
+	column privacyLevel
+		dataType: string
+		lineageTag: 8628f41e-b399-4921-a12d-c0fc6896cbe8
+		summarizeBy: none
+		sourceColumn: privacyLevel
+
+		annotation SummarizationSetBy = Automatic
+
+	column useEndUserOAuth2Credentials
+		dataType: string
+		lineageTag: 3594e6fa-35bc-4411-910e-40d9e75e384a
+		summarizeBy: none
+		sourceColumn: useEndUserOAuth2Credentials
+
+		annotation SummarizationSetBy = Automatic
+
+	column datasourceName
+		dataType: string
+		lineageTag: c2d84bb0-42ea-4799-8aae-ec45bac1671e
+		summarizeBy: none
+		sourceColumn: datasourceName
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'VM ID'
+		dataType: string
+		lineageTag: b215babe-6f76-43f0-96ec-38aeac8302fc
+		summarizeBy: none
+		sourceColumn: VM ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'VM Name'
+		dataType: string
+		lineageTag: c2c961ab-fe4f-452f-ae74-b0a9a2d18bd4
+		summarizeBy: none
+		sourceColumn: VM Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Notes
+		dataType: string
+		lineageTag: edebc40d-7a05-4d0a-bec6-55448e671d8d
+		summarizeBy: none
+		sourceColumn: Notes
+
+		annotation SummarizationSetBy = Automatic
+
+	partition GatewayConnectors-5421002a-513b-4b8e-9293-143e917b03fb = m
+		mode: import
+		source =
+				let
+				    Source = PowerPlatform.Dataflows(null),
+				    Workspaces = Source{[Id="Workspaces"]}[Data],
+				    #"6c3250c1-cd1a-4bb8-acb7-0518bc2c8151" = Workspaces{[workspaceId="6c3250c1-cd1a-4bb8-acb7-0518bc2c8151"]}[Data],
+				    #"c55614e1-8234-4ef9-827e-cdf18b4a0cb8" = #"6c3250c1-cd1a-4bb8-acb7-0518bc2c8151"{[dataflowId="c55614e1-8234-4ef9-827e-cdf18b4a0cb8"]}[Data],
+				    GatewayConnectors_ = #"c55614e1-8234-4ef9-827e-cdf18b4a0cb8"{[entity="GatewayConnectors",version=""]}[Data],
+				    #"Merged Queries" = Table.NestedJoin(GatewayConnectors_, {"GatewayId"}, Gateways, {"GatewayID"}, "Gateways", JoinKind.LeftOuter),
+				    #"Expanded Gateways" = Table.ExpandTableColumn(#"Merged Queries", "Gateways", {"VM ID", "VM Name", "Notes"}, {"VM ID", "VM Name", "Notes"})
+				in
+				    #"Expanded Gateways"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
