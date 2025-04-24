@@ -1,0 +1,9 @@
+role Restricted
+	modelPermission: read
+
+	tablePermission WS-Owners_RLS
+
+	tablePermission RLS = [Email Address] == USERPRINCIPALNAME()
+
+	annotation PBI_Id = 5687c2fc613d456d9940e0297ae8f6f1
+

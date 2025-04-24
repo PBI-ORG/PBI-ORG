@@ -1,0 +1,21 @@
+relationship 125c151b-3908-5411-77b1-44ef4f7c72b4
+	fromColumn: pbi_activityevents.reportid
+	toColumn: RelationCapacityGroupsReports.ReportId
+
+relationship 66cf2b89-19e3-f3fa-c925-c013877635cb
+	fromColumn: pbi_activityevents.datasetid
+	toColumn: RelationCapacityGroupsDatasets.DatasetId
+
+relationship 2d1816e5-bcd0-1ec6-a3db-c5c9cc3d48c5
+	fromColumn: pbi_activityevents.workspaceid
+	toColumn: WS-Owners_RLS.WorkspaceId
+
+relationship 619cd12e-a3ea-bb9c-fcf2-af571b55fd08
+	fromColumn: pbi_activityevents.CreationDate
+	toColumn: DimDate.Date
+
+relationship a840132a-6cc7-10c6-3dd9-891175c2c0de
+	toCardinality: many
+	fromColumn: pbi_activityevents.workspaceid
+	toColumn: RLS.GroupId
+

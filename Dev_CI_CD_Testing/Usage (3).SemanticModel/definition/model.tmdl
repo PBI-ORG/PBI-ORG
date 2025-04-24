@@ -1,0 +1,39 @@
+model Model
+	culture: en-GB
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+queryGroup 'Not Loading'
+
+	annotation PBI_QueryGroupOrder = 0
+
+queryGroup Parameters
+
+	annotation PBI_QueryGroupOrder = 1
+
+annotation PBIDesktopVersion = 2.141.1558.0 (25.03)+75b5f06a991f8f8a8a4d6b6fcd0f66e1ec2d6fdc
+
+annotation PBI_QueryOrder = ["DimDate","DimTime","Key Measures","Last Refreshed","pbi_activityevents","StartDate","Today","ColumnsMissingFromActivityEvents","RelationCapacityGroupsDatasets","WS-Owners","RelationCapacityGroupsReports","WS-Owners_RLS","ActivityEventColumnsTable","ActivityEventColumnsLastDay","Server","Warehouse","Role","Database","RLS","SecurityGroups","GroupsUsers from Nested SecurityGroups","NestedGroups-Users","NestedGroups Not Mapping"]
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table DimDate
+ref table 'Key Measures'
+ref table 'Last Refreshed'
+ref table DimTime
+ref table RelationCapacityGroupsDatasets
+ref table RelationCapacityGroupsReports
+ref table WS-Owners_RLS
+ref table pbi_activityevents
+ref table RLS
+
+ref role All
+ref role Restricted
+
+ref cultureInfo en-GB
+
