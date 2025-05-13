@@ -23,7 +23,7 @@ jobs:
           npm i -g @powerbi-cli/powerbi-cli
       - name: Power BI Login
         run: |
-          pbicli login --service-principal --principal ${{ secrets.POWERBI_CLIENT_ID }} --secret ${{ secrets.POWERBI_CLIENT_SECRET }} --tenant ${{ secrets.POWERBI_TENANT_ID }}
+          pbicli login --service-principal --principal ${{ secrets.POWERBI_CLIENT_ID }} --secret ${{ secrets.POWERBI_CLIENT_SECRET }} --tenant -t ${{ secrets.POWERBI_TENANT_ID }}
       - name: Deploy Power BI Content
         run: |
           pbicli report import --workspace "5734be30-0851-455e-8b8d-2d1de9201b20" --file "../" 
