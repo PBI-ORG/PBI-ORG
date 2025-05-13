@@ -1,0 +1,39 @@
+name: Power BI Deployment
+on:
+  push:
+    branches:
+      - main # Or your main branch
+jobs:
+  deploy:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+      - name: Set up Git Credential Manager
+        uses: actions/setup-git-credential@v3
+        with:
+          name: ${{ github.actor }}
+          email: ${{ github.actor }}@users.noreply.github.com
+          token: ${{ secrets.GITHUB_TOKEN }}
+          # Optional: Set a custom Git user name and email
+          # username: your_username
+          # email: your_email
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22.x'
+      - name: Install Power BI CLI
+        run: |
+          npm i -g @powerbi-cli/powerbi-cli
+      - name: Power BI Login
+        run: |
+          pbicli login --service-principal --principal ${{ secrets.POWERBI_CLIENT_ID }} --secret ${{ secrets.POWERBI_CLIENT_SECRET }} --tenant ${{ secrets.POWERBI_TENANT_ID }}
+      - name: Deploy Power BI Content
+        run: |
+          pbicli report import --workspace "5734be30-0851-455e-8b8d-2d1de9201b20" --file "../" 
+          pbicli report publish --file "../" --workspace "5734be30-0851-455e-8b8d-2d1de9201b20"
+          echo "Deploying Power BI content..."
+      # - name: Clean up
+      #   run: |
+      #     # Clean up any temporary files or directories
+      #     echo "Cleaning up..."
