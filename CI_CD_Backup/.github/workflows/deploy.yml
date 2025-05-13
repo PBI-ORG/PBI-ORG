@@ -2,7 +2,7 @@ name: Power BI Deployment
 on:
   push:
     branches:
-      - main # Or your main branch
+      - master # Or your main branch
 jobs:
   deploy:
     runs-on: windows-latest
