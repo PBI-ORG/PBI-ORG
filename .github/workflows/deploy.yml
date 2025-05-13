@@ -10,14 +10,10 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3
       - name: Set up Git Credential Manager
-        uses: actions/setup-git-credential@v3
-        with:
-          name: ${{ github.actor }}
-          email: ${{ github.actor }}@users.noreply.github.com
-          token: ${{ secrets.GITHUB_TOKEN }}
-          # Optional: Set a custom Git user name and email
-          # username: your_username
-          # email: your_email
+        run: |
+          git config --global user.name "${{ github.actor }}"
+          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+          echo "${{ secrets.GITHUB_TOKEN }}" | git credential-manager-core store
       - name: Use Node.js
         uses: actions/setup-node@v4
         with:
@@ -33,7 +29,3 @@ jobs:
           pbicli report import --workspace "5734be30-0851-455e-8b8d-2d1de9201b20" --file "../" 
           pbicli report publish --file "../" --workspace "5734be30-0851-455e-8b8d-2d1de9201b20"
           echo "Deploying Power BI content..."
-      # - name: Clean up
-      #   run: |
-      #     # Clean up any temporary files or directories
-      #     echo "Cleaning up..."
