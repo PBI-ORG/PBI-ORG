@@ -26,5 +26,5 @@ jobs:
           pbicli login --service-principal --principal "${{ secrets.POWERBI_CLIENT_ID }}" --secret "${{ secrets.POWERBI_CLIENT_SECRET }}" --tenant "${{ secrets.POWERBI_TENANT_ID }}"
       - name: Deploy Power BI Content
         run: |
-          pbicli import pbix --workspace "5734be30-0851-455e-8b8d-2d1de9201b20" --file "./CI_CD_Backup" 
+          pbicli push --file "./CI_CD_Backup" --workspace "5734be30-0851-455e-8b8d-2d1de9201b20" 
           echo "Deploying Power BI content..."
