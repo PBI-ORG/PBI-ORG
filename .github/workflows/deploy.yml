@@ -13,7 +13,7 @@ jobs:
         run: |
           git config --global user.name "${{ github.actor }}"
           git config --global user.email "${{ github.actor }}@users.noreply.github.com"
-      - name: Install Power BI CLI
+      - name: Install Power BI Shell Module
         run: |
           Install-Module -Name MicrosoftPowerBIMgmt -Force -AllowClobber
       - name: Power BI Login
@@ -27,4 +27,4 @@ jobs:
           Connect-PowerBIServiceAccount -ServicePrincipal -Tenant $tenantId -Credential $credentials
       - name: Deploy Power BI Content
         run: |
-          Import-PowerBIFile -Path "./CI_CD_Backups" -WorkspaceId "5734be30-0851-455e-8b8d-2d1de9201b20" -Overwrite
+          New-PowerBIReport -Path "./CI_CD_Backups" -WorkspaceId "5734be30-0851-455e-8b8d-2d1de9201b20" -Overwrite
