@@ -180,7 +180,5 @@ table CreatedSubscriptionsByReportId_API
 				in
 				    CreatedSubscriptionsByReportId_
 
-	annotation PBI_ResultType = Exception
-
-	annotation PBI_NavigationStepName = Navigation
+	annotation PBI_ResultType = Table
 

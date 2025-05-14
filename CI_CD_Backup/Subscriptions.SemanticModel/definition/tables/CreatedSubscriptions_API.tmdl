@@ -222,5 +222,3 @@ table CreatedSubscriptions_API
 
 	annotation PBI_ResultType = Table
 
-	annotation PBI_NavigationStepName = Navigation
-

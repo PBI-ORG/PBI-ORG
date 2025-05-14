@@ -658,8 +658,10 @@ table pbi_activityevents
 		annotation UnderlyingDateTimeDataType = Time
 
 	column WebUrl = "https://app.powerbi.com/groups/" & pbi_activityevents[workspaceid] & "/reports/" & pbi_activityevents[Artifact ID]
+		dataType: string
 		lineageTag: 32955d55-9c20-4276-b3b0-e7701a5c7309
 		summarizeBy: none
+		isDataTypeInferred
 
 		annotation SummarizationSetBy = Automatic
 
@@ -734,6 +736,4 @@ table pbi_activityevents
 				```
 
 	annotation PBI_ResultType = Table
-
-	annotation PBI_NavigationStepName = Navigation
 

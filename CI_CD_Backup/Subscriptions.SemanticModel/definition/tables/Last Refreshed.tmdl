@@ -20,5 +20,3 @@ table 'Last Refreshed'
 
 	annotation PBI_ResultType = DateTime
 
-	annotation PBI_NavigationStepName = Navigation
-

@@ -182,5 +182,3 @@ table CreatedSubscriptionsByDashboard_API
 
 	annotation PBI_ResultType = Table
 
-	annotation PBI_NavigationStepName = Navigation
-
