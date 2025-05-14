@@ -11,8 +11,8 @@ jobs:
         uses: actions/checkout@v3
       - name: Set up Git Credential Manager
         run: |
-          git config --global user.name "${{ github.actor }}"
-          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+          git config --global user.name "Susanta"
+          git config --global user.email "sahoo.susanta@ivycomptech.com"
       - name: Install Power BI Shell Module
         run: |
           Install-Module -Name MicrosoftPowerBIMgmt -Force -AllowClobber
