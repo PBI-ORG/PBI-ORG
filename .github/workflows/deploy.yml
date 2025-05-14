@@ -2,7 +2,7 @@ name: Power BI Deployment
 on:
   push:
     branches:
-      - master # Or your main branch
+      - master
     paths:
       - reports.json
       - CI_CD_Backup/Reports/*
