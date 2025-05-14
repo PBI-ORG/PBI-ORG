@@ -29,6 +29,6 @@ jobs:
           foreach ($report in $reportJson.reports) {
             $workspaceId = $report.workspaceId
             foreach ($reportName in $report.reportList) {
-              New-PowerBIReport -Path ".\CI_CD_Backup\Reports\"+$reportName+".pbix" -WorkspaceId $workspaceId -ConflictAction "CreateOrOverwrite"
+              New-PowerBIReport -Path ".\CI_CD_Backup\Reports\$reportName.pbix" -WorkspaceId $workspaceId -ConflictAction "CreateOrOverwrite"
             }
           }
