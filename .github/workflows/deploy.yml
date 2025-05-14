@@ -26,9 +26,9 @@ jobs:
           $credentials = New-Object System.Management.Automation.PSCredential($appId, $SecurePassword)
           
           Login-PowerBIServiceAccount -ServicePrincipal -Tenant $tenantId -Credential $credentials
-          for $report in $reportJson.reports {
+          foreach ($report in $reportJson.reports) {
             $workspaceId = $report.workspaceId
-            for $reportName in $report.reportList {
+            foreach ($reportName in $report.reportList) {
               echo $reportName+" in " + $workspaceId
             }
           }
