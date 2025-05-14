@@ -3,6 +3,9 @@ on:
   push:
     branches:
       - master # Or your main branch
+    paths:
+      - reports.json
+      - CI_CD_Backup/Reports/*
 jobs:
   deploy:
     runs-on: windows-latest
