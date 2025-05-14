@@ -11,13 +11,14 @@ jobs:
         uses: actions/checkout@v3
       - name: Set up Git Credential Manager
         run: |
-          git config --global user.name "Susanta"
-          git config --global user.email "sahoo.susanta@ivycomptech.com"
+          git config --global user.name "${{ github.actor }}"
+          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
       - name: Install Power BI Shell Module
         run: |
           Install-Module -Name MicrosoftPowerBIMgmt -Force -AllowClobber
       - name: Power BI Login
         run: |
+          $reportJson = Get-Content -Raw -Path "reports.json" | ConvertFrom-Json
           $tenantId = "${{ secrets.POWERBI_TENANT_ID }}"
           $appId = "${{ secrets.POWERBI_CLIENT_ID }}"
           $appSecret = "${{ secrets.POWERBI_CLIENT_SECRET }}"
@@ -25,7 +26,11 @@ jobs:
           $credentials = New-Object System.Management.Automation.PSCredential($appId, $SecurePassword)
           
           Login-PowerBIServiceAccount -ServicePrincipal -Tenant $tenantId -Credential $credentials
-          New-PowerBIReport -Path ".\CI_CD_Backup\Reports\Subscriptions.pbix" -WorkspaceId "5734be30-0851-455e-8b8d-2d1de9201b20" -ConflictAction "CreateOrOverwrite"
-      # - name: Deploy Power BI Content
-      #   run: |
-      #     New-PowerBIReport -Path "./CI_CD_Backups" -WorkspaceId "5734be30-0851-455e-8b8d-2d1de9201b20" -ConflictAction "CreateOrOverwrite"
+          for $report in $reportJson.reports {
+            $workspaceId = $report.workspaceId
+            for $reportName in $report.reportList {
+              echo $reportName+" in " + $workspaceId
+            }
+          }
+        #  New-PowerBIReport -Path ".\CI_CD_Backup\Reports\{{ $reportName }}.pbix" -WorkspaceId $workspaceId -ConflictAction "CreateOrOverwrite"
+          
