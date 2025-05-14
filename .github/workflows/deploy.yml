@@ -13,19 +13,18 @@ jobs:
         run: |
           git config --global user.name "${{ github.actor }}"
           git config --global user.email "${{ github.actor }}@users.noreply.github.com"
-          
-      - name: Use Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '22.x'
       - name: Install Power BI CLI
         run: |
-          npm i -g @powerbi-cli/powerbi-cli
+          Install-Module -Name MicrosoftPowerBIMgmt -Force -AllowClobber
       - name: Power BI Login
         run: |
-          pbicli login --service-principal --principal "${{ secrets.POWERBI_CLIENT_ID }}" --secret "${{ secrets.POWERBI_CLIENT_SECRET }}" --tenant "${{ secrets.POWERBI_TENANT_ID }}"
+          $tenantId = "${{ secrets.POWERBI_TENANT_ID }}"
+          $appId = "${{ secrets.POWERBI_CLIENT_ID }}"
+          $appSecret = "${{ secrets.POWERBI_CLIENT_SECRET }}"
+          $SecurePassword = ConvertTo-SecureString $appSecret -AsPlainText -Force
+          $credentials = New-Object System.Management.Automation.PSCredential($appId, $SecurePassword)
+          
+          Connect-PowerBIServiceAccount -ServicePrincipal -Tenant $tenantId -Credential $credentials
       - name: Deploy Power BI Content
         run: |
-          pbicli export --workspace "5734be30-0851-455e-8b8d-2d1de9201b20" --file "./CI_CD_Backups" 
-        #pbicli push --file "./CI_CD_Backup" --workspace "5734be30-0851-455e-8b8d-2d1de9201b20" 
-        #echo "Deploying Power BI content..."
+          Import-PowerBIReport -ReportPath "./CI_CD_Backups" -WorkspaceId "5734be30-0851-455e-8b8d-2d1de9201b20" -Overwrite
