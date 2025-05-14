@@ -25,7 +25,7 @@ jobs:
           $credentials = New-Object System.Management.Automation.PSCredential($appId, $SecurePassword)
           
           Login-PowerBIServiceAccount -ServicePrincipal -Tenant $tenantId -Credential $credentials
-          New-PowerBIReport -Path "./CI_CD_Backup/Reports/" -WorkspaceId "5734be30-0851-455e-8b8d-2d1de9201b20" -ConflictAction "CreateOrOverwrite"
+          New-PowerBIReport -Path ".\CI_CD_Backup\Reports\Subscriptions.pbix" -WorkspaceId "5734be30-0851-455e-8b8d-2d1de9201b20" -ConflictAction "CreateOrOverwrite"
       # - name: Deploy Power BI Content
       #   run: |
       #     New-PowerBIReport -Path "./CI_CD_Backups" -WorkspaceId "5734be30-0851-455e-8b8d-2d1de9201b20" -ConflictAction "CreateOrOverwrite"
