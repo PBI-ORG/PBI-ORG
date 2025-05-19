@@ -33,6 +33,6 @@ jobs:
             $workspaceId = $report.workspaceId
             $workspaceName = $report.workspaceName
             foreach ($reportName in $report.reportList) {
-              New-PowerBIReport -Path ".\Reports\$workspaceName\$reportName.pbix" -WorkspaceId $workspaceId -ConflictAction "Overwrite"
+              New-PowerBIReport -Path ".\Reports\$workspaceName\$reportName.pbix" -WorkspaceId $workspaceId -ConflictAction "CreateOrOverwrite"
             }
           }
