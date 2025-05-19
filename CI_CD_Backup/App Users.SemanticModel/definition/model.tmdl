@@ -1,0 +1,38 @@
+model Model
+	culture: en-GB
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-GB
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+queryGroup 'Not Loading'
+
+	annotation PBI_QueryGroupOrder = 0
+
+queryGroup 'Not Loading\Users'
+
+	annotation PBI_QueryGroupOrder = 0
+
+annotation PBIDesktopVersion = 2.131.1203.0 (24.07)
+
+annotation PBI_QueryOrder = ["Last Refreshed","SecurityGroups","AppsUsers","NestedGroups-Users","AppsUsers from Nested SecurityGroups","NestedGroups Not Mapping","Key Measures","PageSecurity","WS-Owners","RLS","Apps"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table DateTableTemplate_0e602c0b-da63-43fe-9ccd-77a6f83d9b7a
+ref table 'Last Refreshed'
+ref table LocalDateTable_b3e702a3-bec1-4623-8cf5-c4d1e147e53c
+ref table AppsUsers
+ref table 'Key Measures'
+ref table PageSecurity
+ref table WS-Owners
+ref table RLS
+
+ref role All
+ref role Restricted
+
+ref cultureInfo en-GB
+

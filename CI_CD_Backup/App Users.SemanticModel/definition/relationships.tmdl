@@ -1,0 +1,17 @@
+relationship 0ff215ca-899f-43e3-afac-5330f113de68
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Last Refreshed'.'Last Refreshed'
+	toColumn: LocalDateTable_b3e702a3-bec1-4623-8cf5-c4d1e147e53c.Date
+
+relationship 748e79dd-97db-fe0f-392e-a0da056ead24
+	toCardinality: many
+	fromColumn: AppsUsers.AppId
+	toColumn: RLS.AppId
+
+relationship f9f7f636-0bf0-5284-7cae-f0bcc3cacfd0
+	crossFilteringBehavior: bothDirections
+	securityFilteringBehavior: bothDirections
+	toCardinality: many
+	fromColumn: AppsUsers.workspaceId
+	toColumn: WS-Owners.WorkspaceId
+

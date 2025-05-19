@@ -1,0 +1,7 @@
+role All
+	modelPermission: read
+
+	tablePermission PageSecurity = [User]=[User used]
+
+	annotation PBI_Id = c553dff0654944159d2dd7ed254c88b0
+

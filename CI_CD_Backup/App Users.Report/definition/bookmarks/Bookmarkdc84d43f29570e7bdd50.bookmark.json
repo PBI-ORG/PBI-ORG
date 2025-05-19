@@ -1,0 +1,63 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/1.0.0/schema.json",
+  "name": "Bookmarkdc84d43f29570e7bdd50",
+  "displayName": "Show Filters",
+  "explorationState": {
+    "version": "1.3",
+    "activeSection": "ReportSection6a703f1031caa910d5c1",
+    "sections": {
+      "ReportSection6a703f1031caa910d5c1": {
+        "visualContainers": {},
+        "visualContainerGroups": {
+          "82c2d54d2da27080c791": {
+            "children": {
+              "5609fdd7d0e3f4e4e088": {
+                "isHidden": false
+              }
+            }
+          }
+        }
+      }
+    },
+    "objects": {
+      "merge": {
+        "outspacePane": [
+          {
+            "properties": {
+              "expanded": {
+                "expr": {
+                  "Literal": {
+                    "Value": "false"
+                  }
+                }
+              },
+              "visible": {
+                "expr": {
+                  "Literal": {
+                    "Value": "false"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "options": {
+    "applyOnlyToTargetVisuals": true,
+    "targetVisualNames": [
+      "5609fdd7d0e3f4e4e088",
+      "054121c947f567d194bf",
+      "2a23edc409e3f65581be",
+      "430e38ec52ad997a917e",
+      "748cd42a8460ffe1cfc7",
+      "891bb6eb28343f4f1fe6",
+      "be1998c59698d5bfc2f2",
+      "05cab72c2a449a488b60",
+      "ba1c9b6329fba9931184",
+      "8f74d6dc752126c9ebbb"
+    ],
+    "suppressData": true
+  }
+}

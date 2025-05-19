@@ -1,0 +1,1838 @@
+cultureInfo en-GB
+
+	linguisticMetadata =
+			{
+			  "Version": "2.0.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "last_refreshed": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Last Refreshed"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "last refreshed": {
+			            "State": "Generated",
+			            "Weight": 0.87
+			          }
+			        },
+			        {
+			          "end refreshed": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "final refreshed": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "closing refreshed": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "concluding refreshed": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "finishing refreshed": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "former refreshed": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "latest refreshed": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "latter refreshed": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "past refreshed": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "remaining refreshed": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "last_refreshed.last_refreshed": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Last Refreshed",
+			          "ConceptualProperty": "Last Refreshed"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "last refreshed": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "end refreshed": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "final refreshed": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "closing refreshed": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "concluding refreshed": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "finishing refreshed": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "former refreshed": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "latest refreshed": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "latter refreshed": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "past refreshed": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "remaining refreshed": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "last_refreshed.last_refreshed.variation.date_hierarchy": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Last Refreshed",
+			          "VariationSource": "Last Refreshed",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "last refreshed date hierarchy": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date hierarchy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "last_refreshed.last_refreshed.variation.date_hierarchy.year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Last Refreshed",
+			          "VariationSource": "Last Refreshed",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "last refreshed year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "last refreshed yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "end refreshed year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "final refreshed year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "closing refreshed year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "concluding refreshed year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "finishing refreshed year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "former refreshed year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "latest refreshed year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "latter refreshed year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "last_refreshed.last_refreshed.variation.date_hierarchy.quarter": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Last Refreshed",
+			          "VariationSource": "Last Refreshed",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Quarter"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "last refreshed quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "last refreshed qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.846
+			          }
+			        },
+			        {
+			          "qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.818
+			          }
+			        },
+			        {
+			          "end refreshed quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "final refreshed quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "closing refreshed quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "concluding refreshed quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "finishing refreshed quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "former refreshed quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "latest refreshed quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "latter refreshed quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "last_refreshed.last_refreshed.variation.date_hierarchy.month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Last Refreshed",
+			          "VariationSource": "Last Refreshed",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "last refreshed month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "last refreshed mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "end refreshed month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "final refreshed month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "closing refreshed month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "concluding refreshed month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "finishing refreshed month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "former refreshed month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "latest refreshed month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "latter refreshed month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "last_refreshed.last_refreshed.variation.date_hierarchy.day": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Last Refreshed",
+			          "VariationSource": "Last Refreshed",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Day"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "last refreshed day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "end refreshed day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "final refreshed day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "closing refreshed day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "concluding refreshed day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "finishing refreshed day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "former refreshed day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "latest refreshed day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "latter refreshed day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "past refreshed day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "remaining refreshed day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "apps_user": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "AppsUsers"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "apps user": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "app user": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "AppsUsers": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "user": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "app operator": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "app worker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "app employer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "app manipulator": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "app handler": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "app manager": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "operator": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "worker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "employer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "manipulator": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        }
+			      ]
+			    },
+			    "apps_user.app_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "AppsUsers",
+			          "ConceptualProperty": "AppName"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "app name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "AppName": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "app": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "app nickname": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "app title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "app label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "app tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "apps_user.app_user_access_right": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "AppsUsers",
+			          "ConceptualProperty": "AppUserAccessRight"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "app user access right": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "AppUserAccessRight": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "access right": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "user access right": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "apps_user.display_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "AppsUsers",
+			          "ConceptualProperty": "displayName"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "display name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "displayName": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "display nickname": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "display title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "display label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "display tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "apps_user.email_address": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "AppsUsers",
+			          "ConceptualProperty": "Email Address"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "email address": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "address": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "email location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "email direction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "email residence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "direction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "residence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "email contact": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "email place": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "contact": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "place": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    },
+			    "apps_user.custom": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "AppsUsers",
+			          "ConceptualProperty": "Having readergroups/not"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "custom": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "tradition": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "convention": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "norm": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "institution": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "practice": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "routine": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "habit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "ritual": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "pattern": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "way": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "dim_date.dateid": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_date",
+			          "ConceptualProperty": "dateid"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Dates": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    }
+			  },
+			  "Relationships": {
+			    "apps_user_has_display_name": {
+			      "Binding": {
+			        "ConceptualEntity": "AppsUsers"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "apps_user": {
+			          "Target": {
+			            "Entity": "apps_user"
+			          }
+			        },
+			        "apps_user.display_name": {
+			          "Target": {
+			            "Entity": "apps_user.display_name"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "apps_user"
+			            },
+			            "Object": {
+			              "Role": "apps_user.display_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "apps_user_has_app_user_access_right": {
+			      "Binding": {
+			        "ConceptualEntity": "AppsUsers"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "apps_user": {
+			          "Target": {
+			            "Entity": "apps_user"
+			          }
+			        },
+			        "apps_user.app_user_access_right": {
+			          "Target": {
+			            "Entity": "apps_user.app_user_access_right"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "apps_user"
+			            },
+			            "Object": {
+			              "Role": "apps_user.app_user_access_right"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "apps_user_has_app_name": {
+			      "Binding": {
+			        "ConceptualEntity": "AppsUsers"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "apps_user": {
+			          "Target": {
+			            "Entity": "apps_user"
+			          }
+			        },
+			        "apps_user.app_name": {
+			          "Target": {
+			            "Entity": "apps_user.app_name"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "apps_user"
+			            },
+			            "Object": {
+			              "Role": "apps_user.app_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "last_refreshed_has_last_refreshed": {
+			      "Binding": {
+			        "ConceptualEntity": "Last Refreshed"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "last_refreshed": {
+			          "Target": {
+			            "Entity": "last_refreshed"
+			          }
+			        },
+			        "last_refreshed.last_refreshed": {
+			          "Target": {
+			            "Entity": "last_refreshed.last_refreshed"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "last_refreshed"
+			            },
+			            "Object": {
+			              "Role": "last_refreshed.last_refreshed"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "apps_user_in_email_address": {
+			      "Binding": {
+			        "ConceptualEntity": "AppsUsers"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "apps_user": {
+			          "Target": {
+			            "Entity": "apps_user"
+			          }
+			        },
+			        "apps_user.email_address": {
+			          "Target": {
+			            "Entity": "apps_user.email_address"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "apps_user.email_address"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "apps_user"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "apps_user.email_address"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "last_refreshed_is_refreshed_on_last_refreshed": {
+			      "Binding": {
+			        "ConceptualEntity": "Last Refreshed"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "last_refreshed": {
+			          "Target": {
+			            "Entity": "last_refreshed"
+			          }
+			        },
+			        "last_refreshed.last_refreshed": {
+			          "Target": {
+			            "Entity": "last_refreshed.last_refreshed"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "When": {
+			          "Role": "last_refreshed.last_refreshed"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Verb": {
+			            "Verbs": [
+			              {
+			                "refresh": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "last_refreshed"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.9
+			        }
+			      ]
+			    },
+			    "apps_user_use": {
+			      "Binding": {
+			        "ConceptualEntity": "AppsUsers"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "apps_user": {
+			          "Target": {
+			            "Entity": "apps_user"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Verb": {
+			            "Subject": {
+			              "Role": "apps_user"
+			            },
+			            "Verbs": [
+			              {
+			                "use": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ]
+			          },
+			          "State": "Generated",
+			          "Weight": 0.75
+			        }
+			      ]
+			    },
+			    "apps_user_has_email_address": {
+			      "Binding": {
+			        "ConceptualEntity": "AppsUsers"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "apps_user": {
+			          "Target": {
+			            "Entity": "apps_user"
+			          }
+			        },
+			        "apps_user.email_address": {
+			          "Target": {
+			            "Entity": "apps_user.email_address"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "apps_user"
+			            },
+			            "Object": {
+			              "Role": "apps_user.email_address"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "apps_user_has_custom": {
+			      "Binding": {
+			        "ConceptualEntity": "AppsUsers"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "apps_user": {
+			          "Target": {
+			            "Entity": "apps_user"
+			          }
+			        },
+			        "apps_user.custom": {
+			          "Target": {
+			            "Entity": "apps_user.custom"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "apps_user"
+			            },
+			            "Object": {
+			              "Role": "apps_user.custom"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "apps_user_has_reader_group": {
+			      "Binding": {
+			        "ConceptualEntity": "AppsUsers"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "apps_user": {
+			          "Target": {
+			            "Entity": "apps_user"
+			          }
+			        },
+			        "apps_user.reader_group": {
+			          "Target": {
+			            "Entity": "apps_user.reader_group"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "apps_user"
+			            },
+			            "Object": {
+			              "Role": "apps_user.reader_group"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "last_refreshed_last_refreshed_has_variation_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "Last Refreshed"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "last_refreshed.last_refreshed": {
+			          "Target": {
+			            "Entity": "last_refreshed.last_refreshed"
+			          }
+			        },
+			        "last_refreshed.last_refreshed.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "last_refreshed.last_refreshed.variation.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "last_refreshed.last_refreshed"
+			            },
+			            "Object": {
+			              "Role": "last_refreshed.last_refreshed.variation.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "last_refreshed_last_refreshed_variation_date_hierarchy_has_year": {
+			      "Binding": {
+			        "ConceptualEntity": "Last Refreshed"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "last_refreshed.last_refreshed.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "last_refreshed.last_refreshed.variation.date_hierarchy"
+			          }
+			        },
+			        "last_refreshed.last_refreshed.variation.date_hierarchy.year": {
+			          "Target": {
+			            "Entity": "last_refreshed.last_refreshed.variation.date_hierarchy.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "last_refreshed.last_refreshed.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "last_refreshed.last_refreshed.variation.date_hierarchy.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "last_refreshed_last_refreshed_variation_date_hierarchy_has_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "Last Refreshed"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "last_refreshed.last_refreshed.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "last_refreshed.last_refreshed.variation.date_hierarchy"
+			          }
+			        },
+			        "last_refreshed.last_refreshed.variation.date_hierarchy.quarter": {
+			          "Target": {
+			            "Entity": "last_refreshed.last_refreshed.variation.date_hierarchy.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "last_refreshed.last_refreshed.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "last_refreshed.last_refreshed.variation.date_hierarchy.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "last_refreshed_last_refreshed_variation_date_hierarchy_has_month": {
+			      "Binding": {
+			        "ConceptualEntity": "Last Refreshed"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "last_refreshed.last_refreshed.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "last_refreshed.last_refreshed.variation.date_hierarchy"
+			          }
+			        },
+			        "last_refreshed.last_refreshed.variation.date_hierarchy.month": {
+			          "Target": {
+			            "Entity": "last_refreshed.last_refreshed.variation.date_hierarchy.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "last_refreshed.last_refreshed.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "last_refreshed.last_refreshed.variation.date_hierarchy.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "last_refreshed_last_refreshed_variation_date_hierarchy_has_day": {
+			      "Binding": {
+			        "ConceptualEntity": "Last Refreshed"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "last_refreshed.last_refreshed.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "last_refreshed.last_refreshed.variation.date_hierarchy"
+			          }
+			        },
+			        "last_refreshed.last_refreshed.variation.date_hierarchy.day": {
+			          "Target": {
+			            "Entity": "last_refreshed.last_refreshed.variation.date_hierarchy.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "last_refreshed.last_refreshed.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "last_refreshed.last_refreshed.variation.date_hierarchy.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    }
+			  }
+			}
+		contentType: json
+
