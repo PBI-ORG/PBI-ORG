@@ -1,7 +1,0 @@
-role Restricted
-	modelPermission: read
-
-	tablePermission WS-Owners = [Owner] == USERPRINCIPALNAME() ||  CONTAINSSTRING([Sub-Owner],USERPRINCIPALNAME())
-
-	annotation PBI_Id = 22cd50119d2f46cf96dde2c768f63e10
-
