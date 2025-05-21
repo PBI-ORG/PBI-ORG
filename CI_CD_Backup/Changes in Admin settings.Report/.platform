@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Changes in Admin settings"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "3d8f9c6c-3ee0-ac32-4a30-9085ac2dce65"
+  }
+}
