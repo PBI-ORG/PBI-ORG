@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Changes in Admin settings"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "06e80b3f-14e9-4522-90db-fa93cb8b3ca7"
+  }
+}

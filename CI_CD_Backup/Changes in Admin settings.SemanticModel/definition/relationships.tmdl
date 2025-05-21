@@ -1,0 +1,4 @@
+relationship a2efbb18-e2f7-414d-ae6d-5eb421038a5c
+	fromColumn: pbi_activityevents.CreationDate
+	toColumn: dim_date.Date
+
