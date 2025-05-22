@@ -3,6 +3,7 @@
   "datasetReference": {
     "byPath": {
       "path": "../Changes in Admin settings.SemanticModel"
-    }
+    },
+    "byConnection": null
   }
 }

@@ -16,6 +16,8 @@ annotation PBI_QueryOrder = ["dim_date","Key Measures","Last Refreshed","pbi_act
 
 annotation __PBI_TimeIntelligenceEnabled = 0
 
+annotation PBI_ProTooling = ["DevMode"]
+
 ref table dim_date
 ref table 'Last Refreshed'
 ref table pbi_activityevents

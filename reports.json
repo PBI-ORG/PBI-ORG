@@ -4,7 +4,6 @@
             "workspaceId": "5734be30-0851-455e-8b8d-2d1de9201b20",
             "workspaceName": "CI_CD_Backup",
             "reportList": ["Changes in Admin settings"]
-        },
-        {}
+        }
     ]
 }
