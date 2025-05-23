@@ -8783,7 +8783,9 @@ cultureInfo en-GB
 			      },
 			      "State": "Generated",
 			      "Terms": [
-			        {},
+			        {
+			          "": {}
+			        },
 			        {
 			          "location": {
 			            "Type": "Noun",

@@ -1,0 +1,97 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/1.4.0/schema.json",
+  "name": "ReportSection815f243ea92888e1e5be",
+  "displayName": "Trends",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "objects": {
+    "background": [
+      {
+        "properties": {
+          "transparency": {
+            "expr": {
+              "Literal": {
+                "Value": "80D"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "outspace": [
+      {
+        "properties": {
+          "transparency": {
+            "expr": {
+              "Literal": {
+                "Value": "80D"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "outspacePane": [
+      {
+        "properties": {
+          "transparency": {
+            "expr": {
+              "Literal": {
+                "Value": "0D"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "filterCard": [
+      {
+        "properties": {
+          "transparency": {
+            "expr": {
+              "Literal": {
+                "Value": "0L"
+              }
+            }
+          }
+        },
+        "selector": {
+          "id": "Available"
+        }
+      }
+    ]
+  },
+  "visualInteractions": [
+    {
+      "source": "43706818a305f3e4ef00",
+      "target": "bfd130dade5ed9ae5c52",
+      "type": "DataFilter"
+    },
+    {
+      "source": "bfd130dade5ed9ae5c52",
+      "target": "43706818a305f3e4ef00",
+      "type": "DataFilter"
+    },
+    {
+      "source": "f16bd8475b718c8d568c",
+      "target": "43706818a305f3e4ef00",
+      "type": "DataFilter"
+    },
+    {
+      "source": "f16bd8475b718c8d568c",
+      "target": "bfd130dade5ed9ae5c52",
+      "type": "DataFilter"
+    },
+    {
+      "source": "0873c787784dba817dfa",
+      "target": "bfd130dade5ed9ae5c52",
+      "type": "DataFilter"
+    },
+    {
+      "source": "0873c787784dba817dfa",
+      "target": "43706818a305f3e4ef00",
+      "type": "DataFilter"
+    }
+  ]
+}

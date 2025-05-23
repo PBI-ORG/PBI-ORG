@@ -1,0 +1,4805 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "1ab106091a2beca9da24",
+  "position": {
+    "x": 17.241379310344829,
+    "y": 128.73563218390805,
+    "z": 3000,
+    "height": 541.37931034482756,
+    "width": 1080.4597701149426,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "pbi_activityevents"
+                    }
+                  },
+                  "Property": "userid"
+                }
+              },
+              "queryRef": "pbi_activityevents.userid",
+              "nativeQueryRef": "User",
+              "active": true,
+              "displayName": "User"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "pbi_activityevents"
+                    }
+                  },
+                  "Property": "workspacename"
+                }
+              },
+              "queryRef": "pbi_activityevents.workspacename",
+              "nativeQueryRef": "WorkspaceName",
+              "active": true,
+              "displayName": "WorkspaceName"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "pbi_activityevents"
+                    }
+                  },
+                  "Property": "itemname"
+                }
+              },
+              "queryRef": "pbi_activityevents.itemname",
+              "nativeQueryRef": "ReportName",
+              "active": true,
+              "displayName": "ReportName"
+            }
+          ],
+          "showAll": true
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Key Measures"
+                    }
+                  },
+                  "Property": "L30D Views"
+                }
+              },
+              "queryRef": "Key Measures.L30D Views",
+              "nativeQueryRef": "L30D Views"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Key Measures"
+                    }
+                  },
+                  "Property": "L60D Views"
+                }
+              },
+              "queryRef": "Key Measures.L60D Views",
+              "nativeQueryRef": "L60D Views"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Key Measures"
+                    }
+                  },
+                  "Property": "L90D Views"
+                }
+              },
+              "queryRef": "Key Measures.L90D Views",
+              "nativeQueryRef": "L90D Views"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Key Measures"
+                    }
+                  },
+                  "Property": "# Views"
+                }
+              },
+              "queryRef": "Key Measures.# Views",
+              "nativeQueryRef": "Total Views",
+              "displayName": "Total Views"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Key Measures"
+                  }
+                },
+                "Property": "L60D Views"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "expansionStates": [
+      {
+        "roles": [
+          "Rows"
+        ],
+        "levels": [
+          {
+            "queryRefs": [
+              "pbi_activityevents.userid"
+            ],
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "pbi_activityevents"
+                    }
+                  },
+                  "Property": "userid"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "pbi_activityevents.workspacename"
+            ],
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "pbi_activityevents"
+                    }
+                  },
+                  "Property": "workspacename"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "pbi_activityevents.itemname"
+            ],
+            "isCollapsed": true,
+            "isPinned": true
+          }
+        ],
+        "root": {}
+      }
+    ],
+    "objects": {
+      "columnHeaders": [
+        {
+          "properties": {
+            "autoSizeColumnWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.5
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "total": [
+        {
+          "properties": {}
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "40D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "task._count"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "65D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "task._closed%"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "45D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "task._count_open"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "68D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(task._time_taken_days)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "118D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "task.dv_sys_class_name"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "50D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "task.resolved_at.Variation.Date Hierarchy.Month"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "36D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "task.resolved_at.Variation.Date Hierarchy.Year"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "48D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "task.resolved_at.Variation.Date Hierarchy.Quarter"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "30D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "task.resolved_at.Variation.Date Hierarchy.Day"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "36D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "task._closed_at_datetime.Variation.Date Hierarchy.Year"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "48D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "task._closed_at_datetime.Variation.Date Hierarchy.Quarter"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "50D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "task._closed_at_datetime.Variation.Date Hierarchy.Month"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "30D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "task._closed_at_datetime.Variation.Date Hierarchy.Day"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "59D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(dim_date.datenum)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "110D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(dim_date.changetrackingmask)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "101D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(dim_date.calyearquarternum)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "132D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(dim_date.Month Year Order)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "66D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "pbi_activityevents.Developer"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "113.97698493105177D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Key Measures.L30D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "107.08046239086103D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Key Measures.L60D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "109.3793131197352D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Key Measures.L90D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "179D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "pbi_activityevents.workspacename"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "593.3292836640878D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "pbi_activityevents.userid"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "RelationCapacityGroupsReports"
+                          }
+                        },
+                        "Property": "ReportName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "null"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L30D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "RelationCapacityGroupsReports"
+                          }
+                        },
+                        "Property": "ReportName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "null"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L60D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "RelationCapacityGroupsReports"
+                          }
+                        },
+                        "Property": "ReportName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "null"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L90D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "RelationCapacityGroupsReports"
+                          }
+                        },
+                        "Property": "ReportName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "' BetMGM Customer Care Breaktime Email Report'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L30D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "RelationCapacityGroupsReports"
+                          }
+                        },
+                        "Property": "ReportName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "' BetMGM Customer Care Breaktime Email Report'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L60D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "107D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "RelationCapacityGroupsReports"
+                          }
+                        },
+                        "Property": "ReportName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "' BetMGM Customer Care Breaktime Email Report'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L90D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "RelationCapacityGroupsReports"
+                          }
+                        },
+                        "Property": "ReportName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "' Casino Preferred Product Stakes'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L30D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "RelationCapacityGroupsReports"
+                          }
+                        },
+                        "Property": "ReportName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "' Casino Preferred Product Stakes'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L60D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "RelationCapacityGroupsReports"
+                          }
+                        },
+                        "Property": "ReportName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "' Casino Preferred Product Stakes'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L90D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "RelationCapacityGroupsReports"
+                          }
+                        },
+                        "Property": "ReportName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'.Com & Regulated Acquisiton Report - Risk Version (Snowflake)'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L30D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "RelationCapacityGroupsReports"
+                          }
+                        },
+                        "Property": "ReportName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'.Com & Regulated Acquisiton Report - Risk Version (Snowflake)'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L60D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "176D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "RelationCapacityGroupsReports"
+                          }
+                        },
+                        "Property": "ReportName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'.Com & Regulated Acquisiton Report - Risk Version (Snowflake)'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L90D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "RelationCapacityGroupsReports"
+                          }
+                        },
+                        "Property": "ReportName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'[App] 1 Minute Cash Out Report'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L30D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "RelationCapacityGroupsReports"
+                          }
+                        },
+                        "Property": "ReportName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'[App] 1 Minute Cash Out Report'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L60D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "RelationCapacityGroupsReports"
+                          }
+                        },
+                        "Property": "ReportName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'[App] 1 Minute Cash Out Report'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L90D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "RelationCapacityGroupsReports"
+                          }
+                        },
+                        "Property": "ReportName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'[App] 1k Gross WIn win & loss_SF'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L30D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "RelationCapacityGroupsReports"
+                          }
+                        },
+                        "Property": "ReportName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'[App] 1k Gross WIn win & loss_SF'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L60D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "RelationCapacityGroupsReports"
+                          }
+                        },
+                        "Property": "ReportName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'[App] 1k Gross WIn win & loss_SF'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L90D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "RelationCapacityGroupsReports"
+                          }
+                        },
+                        "Property": "ReportName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'[App] 2024 Actuals'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L30D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "RelationCapacityGroupsReports"
+                          }
+                        },
+                        "Property": "ReportName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'[App] 2024 Actuals'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L60D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "RelationCapacityGroupsReports"
+                          }
+                        },
+                        "Property": "ReportName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'[App] 2024 Actuals'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L90D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "RelationCapacityGroupsReports"
+                          }
+                        },
+                        "Property": "ReportName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'[App] 2024 Ireland Hours Worked'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L30D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "RelationCapacityGroupsReports"
+                          }
+                        },
+                        "Property": "ReportName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'[App] 2024 Ireland Hours Worked'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L60D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "RelationCapacityGroupsReports"
+                          }
+                        },
+                        "Property": "ReportName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'[App] 2024 Ireland Hours Worked'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L90D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "RelationCapacityGroupsReports"
+                          }
+                        },
+                        "Property": "ReportName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'[App] 2024 Lateness'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L30D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "RelationCapacityGroupsReports"
+                          }
+                        },
+                        "Property": "ReportName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'[App] 2024 Lateness'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L60D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "RelationCapacityGroupsReports"
+                          }
+                        },
+                        "Property": "ReportName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'[App] 2024 Lateness'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L90D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "RelationCapacityGroupsReports"
+                          }
+                        },
+                        "Property": "ReportName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'[App] 2024 Productivity Summary'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L30D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "RelationCapacityGroupsReports"
+                          }
+                        },
+                        "Property": "ReportName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'[App] 2024 Productivity Summary'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L60D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "RelationCapacityGroupsReports"
+                          }
+                        },
+                        "Property": "ReportName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'[App] 2024 Productivity Summary'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L90D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "113D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "RelationCapacityGroupsReports"
+                          }
+                        },
+                        "Property": "ReportName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "null"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Min(pbi_activityevents.workspacename)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "113D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "RelationCapacityGroupsReports"
+                          }
+                        },
+                        "Property": "ReportName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "' BetMGM Customer Care Breaktime Email Report'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Min(pbi_activityevents.workspacename)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "113D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "RelationCapacityGroupsReports"
+                          }
+                        },
+                        "Property": "ReportName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "' Casino Preferred Product Stakes'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Min(pbi_activityevents.workspacename)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "113D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "RelationCapacityGroupsReports"
+                          }
+                        },
+                        "Property": "ReportName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'.Com & Regulated Acquisiton Report - Risk Version (Snowflake)'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Min(pbi_activityevents.workspacename)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "113D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "RelationCapacityGroupsReports"
+                          }
+                        },
+                        "Property": "ReportName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'[App] 1 Minute Cash Out Report'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Min(pbi_activityevents.workspacename)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "258D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Min(RelationCapacityGroupsReports.ReportName)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "113D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Min(pbi_activityevents.workspacename)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "113D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "RelationCapacityGroupsReports"
+                          }
+                        },
+                        "Property": "ReportName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'[App] ARC Commercial Impacts 2023'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Min(pbi_activityevents.workspacename)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "RelationCapacityGroupsReports"
+                          }
+                        },
+                        "Property": "ReportName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'[App] ARC Commercial Impacts 2023'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L30D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "RelationCapacityGroupsReports"
+                          }
+                        },
+                        "Property": "ReportName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'[App] ARC Commercial Impacts 2023'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L60D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "RelationCapacityGroupsReports"
+                          }
+                        },
+                        "Property": "ReportName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'[App] ARC Commercial Impacts 2023'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L90D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "113D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "RelationCapacityGroupsReports"
+                          }
+                        },
+                        "Property": "ReportName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'[App] Audience Engagement'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Min(pbi_activityevents.workspacename)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "RelationCapacityGroupsReports"
+                          }
+                        },
+                        "Property": "ReportName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'[App] Audience Engagement'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L30D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "RelationCapacityGroupsReports"
+                          }
+                        },
+                        "Property": "ReportName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'[App] Audience Engagement'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L60D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "RelationCapacityGroupsReports"
+                          }
+                        },
+                        "Property": "ReportName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'[App] Audience Engagement'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L90D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "113D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "RelationCapacityGroupsReports"
+                          }
+                        },
+                        "Property": "ReportName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'[App] Avg SP Overround Report'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Min(pbi_activityevents.workspacename)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "RelationCapacityGroupsReports"
+                          }
+                        },
+                        "Property": "ReportName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'[App] Avg SP Overround Report'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L30D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "RelationCapacityGroupsReports"
+                          }
+                        },
+                        "Property": "ReportName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'[App] Avg SP Overround Report'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L60D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "RelationCapacityGroupsReports"
+                          }
+                        },
+                        "Property": "ReportName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'[App] Avg SP Overround Report'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L90D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "RelationCapacityGroupsReports"
+                          }
+                        },
+                        "Property": "ReportName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'[App] Bet Notes'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L30D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "RelationCapacityGroupsReports"
+                          }
+                        },
+                        "Property": "ReportName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'[App] Bet Notes'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L60D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "RelationCapacityGroupsReports"
+                          }
+                        },
+                        "Property": "ReportName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'[App] Bet Notes'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L90D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "RelationCapacityGroupsReports"
+                          }
+                        },
+                        "Property": "ReportName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'[App] Bonus Spend - Award Detailed'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L30D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "RelationCapacityGroupsReports"
+                          }
+                        },
+                        "Property": "ReportName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'[App] Bonus Spend - Award Detailed'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L60D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "RelationCapacityGroupsReports"
+                          }
+                        },
+                        "Property": "ReportName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'[App] Bonus Spend - Award Detailed'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L90D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "RelationCapacityGroupsReports"
+                          }
+                        },
+                        "Property": "ReportName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'[App] Brand & Market KPI Breakdown'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L30D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "RelationCapacityGroupsReports"
+                          }
+                        },
+                        "Property": "ReportName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'[App] Brand & Market KPI Breakdown'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L60D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "RelationCapacityGroupsReports"
+                          }
+                        },
+                        "Property": "ReportName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'[App] Brand & Market KPI Breakdown'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L90D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "RelationCapacityGroupsReports"
+                          }
+                        },
+                        "Property": "ReportName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'[App] Cash Out Report - Detailed View'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L30D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "RelationCapacityGroupsReports"
+                          }
+                        },
+                        "Property": "ReportName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'[App] Cash Out Report - Detailed View'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L60D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "RelationCapacityGroupsReports"
+                          }
+                        },
+                        "Property": "ReportName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'[App] Cash Out Report - Detailed View'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L90D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "RelationCapacityGroupsReports"
+                          }
+                        },
+                        "Property": "ReportName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'[App] Casino Game KPIs Last 30 Days'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L30D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "RelationCapacityGroupsReports"
+                          }
+                        },
+                        "Property": "ReportName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'[App] Casino Game KPIs Last 30 Days'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L60D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "RelationCapacityGroupsReports"
+                          }
+                        },
+                        "Property": "ReportName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'[App] Casino Game KPIs Last 30 Days'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L90D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "pbi_activityevents"
+                          }
+                        },
+                        "Property": "workspacename"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "''"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L30D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "pbi_activityevents"
+                          }
+                        },
+                        "Property": "workspacename"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "''"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L60D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "pbi_activityevents"
+                          }
+                        },
+                        "Property": "workspacename"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "''"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L90D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "pbi_activityevents"
+                          }
+                        },
+                        "Property": "workspacename"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'_01 - SB - SLT'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L30D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "pbi_activityevents"
+                          }
+                        },
+                        "Property": "workspacename"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'_01 - SB - SLT'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L60D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "pbi_activityevents"
+                          }
+                        },
+                        "Property": "workspacename"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'_01 - SB - SLT'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L90D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "pbi_activityevents"
+                          }
+                        },
+                        "Property": "workspacename"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'_02 - SB - Leaders'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L30D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "pbi_activityevents"
+                          }
+                        },
+                        "Property": "workspacename"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'_02 - SB - Leaders'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L60D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "pbi_activityevents"
+                          }
+                        },
+                        "Property": "workspacename"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'_02 - SB - Leaders'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L90D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "pbi_activityevents"
+                          }
+                        },
+                        "Property": "workspacename"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'_03 - SB - Sportsbook Analytics'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L30D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "pbi_activityevents"
+                          }
+                        },
+                        "Property": "workspacename"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'_03 - SB - Sportsbook Analytics'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L60D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "pbi_activityevents"
+                          }
+                        },
+                        "Property": "workspacename"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'_03 - SB - Sportsbook Analytics'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L90D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "pbi_activityevents"
+                          }
+                        },
+                        "Property": "workspacename"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'_05 - SB - Sports Fulfilment'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L30D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "pbi_activityevents"
+                          }
+                        },
+                        "Property": "workspacename"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'_05 - SB - Sports Fulfilment'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L60D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "pbi_activityevents"
+                          }
+                        },
+                        "Property": "workspacename"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'_05 - SB - Sports Fulfilment'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L90D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "pbi_activityevents"
+                          }
+                        },
+                        "Property": "workspacename"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'_07 - SB - Marketing & Web Analytics'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L30D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "pbi_activityevents"
+                          }
+                        },
+                        "Property": "workspacename"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'_07 - SB - Marketing & Web Analytics'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L60D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "pbi_activityevents"
+                          }
+                        },
+                        "Property": "workspacename"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'_07 - SB - Marketing & Web Analytics'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L90D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "pbi_activityevents"
+                          }
+                        },
+                        "Property": "workspacename"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'_08 - SB - CRM - Reporting'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L30D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "pbi_activityevents"
+                          }
+                        },
+                        "Property": "workspacename"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'_08 - SB - CRM - Reporting'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L60D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "pbi_activityevents"
+                          }
+                        },
+                        "Property": "workspacename"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'_08 - SB - CRM - Reporting'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L90D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "pbi_activityevents"
+                          }
+                        },
+                        "Property": "workspacename"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'_09 - SB - Acquisition'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L30D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "pbi_activityevents"
+                          }
+                        },
+                        "Property": "workspacename"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'_09 - SB - Acquisition'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L60D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "pbi_activityevents"
+                          }
+                        },
+                        "Property": "workspacename"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'_09 - SB - Acquisition'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L90D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "pbi_activityevents"
+                          }
+                        },
+                        "Property": "workspacename"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'_11 - SB - Trading Heads'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L30D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "pbi_activityevents"
+                          }
+                        },
+                        "Property": "workspacename"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'_11 - SB - Trading Heads'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L60D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "pbi_activityevents"
+                          }
+                        },
+                        "Property": "workspacename"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'_11 - SB - Trading Heads'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L90D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "pbi_activityevents"
+                          }
+                        },
+                        "Property": "workspacename"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'_12 - SB - Traders'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L30D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "pbi_activityevents"
+                          }
+                        },
+                        "Property": "workspacename"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'_12 - SB - Traders'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L60D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "pbi_activityevents"
+                          }
+                        },
+                        "Property": "workspacename"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'_12 - SB - Traders'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L90D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "pbi_activityevents"
+                          }
+                        },
+                        "Property": "workspacename"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "' Digital Operational Excellence'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L30D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "pbi_activityevents"
+                          }
+                        },
+                        "Property": "workspacename"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "' Digital Operational Excellence'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L60D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "pbi_activityevents"
+                          }
+                        },
+                        "Property": "workspacename"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "' Digital Operational Excellence'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L90D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "pbi_activityevents"
+                          }
+                        },
+                        "Property": "workspacename"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'_00 - PROD - Datasets and Dataflows'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L30D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "pbi_activityevents"
+                          }
+                        },
+                        "Property": "workspacename"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'_00 - PROD - Datasets and Dataflows'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L60D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "pbi_activityevents"
+                          }
+                        },
+                        "Property": "workspacename"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'_00 - PROD - Datasets and Dataflows'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L90D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "pbi_activityevents"
+                          }
+                        },
+                        "Property": "workspacename"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'_04 - SB - Gaming Analytics'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L30D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "pbi_activityevents"
+                          }
+                        },
+                        "Property": "workspacename"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'_04 - SB - Gaming Analytics'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L60D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "pbi_activityevents"
+                          }
+                        },
+                        "Property": "workspacename"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'_04 - SB - Gaming Analytics'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L90D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "pbi_activityevents"
+                          }
+                        },
+                        "Property": "workspacename"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'_06 - SB - Gaming Fulfilment'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L30D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "pbi_activityevents"
+                          }
+                        },
+                        "Property": "workspacename"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'_06 - SB - Gaming Fulfilment'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L60D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "pbi_activityevents"
+                          }
+                        },
+                        "Property": "workspacename"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'_06 - SB - Gaming Fulfilment'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Key Measures.L90D Views"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "108.92127055330278D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Key Measures.# Views"
+          }
+        }
+      ],
+      "grid": [
+        {
+          "properties": {
+            "outlineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.3
+                    }
+                  }
+                }
+              }
+            },
+            "gridVertical": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "gridVerticalColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.3
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTotals": [
+        {
+          "properties": {
+            "rowSubtotals": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "rowHeaders": [
+        {
+          "properties": {
+            "showExpandCollapseButtons": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Usage of Report By User'"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "background": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#43268B'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#3a3a3a'"
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "20D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "background": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#3a3a3a'"
+                    }
+                  }
+                }
+              }
+            },
+            "border": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#3a3a3a'"
+                    }
+                  }
+                }
+              }
+            },
+            "foreground": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualTooltip": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "section": {
+              "expr": {
+                "Literal": {
+                  "Value": "'ReportSection272d34b0c48a39e2501b'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

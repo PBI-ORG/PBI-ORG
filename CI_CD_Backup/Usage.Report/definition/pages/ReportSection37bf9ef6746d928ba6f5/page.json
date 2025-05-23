@@ -1,0 +1,365 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/1.4.0/schema.json",
+  "name": "ReportSection37bf9ef6746d928ba6f5",
+  "displayName": "RawData",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "Filter1c746cc3e73100b35e84",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "RelationCapacityGroupsDatasets"
+              }
+            },
+            "Property": "GroupName"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough"
+      },
+      {
+        "name": "Filter904c9a3923575c8c5767",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "RelationCapacityGroupsDatasets"
+              }
+            },
+            "Property": "DatasetName"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough"
+      },
+      {
+        "name": "Filterd52f322cbd5446fcb2d3",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "RelationCapacityGroupsDatasets"
+              }
+            },
+            "Property": "CapacityName"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough"
+      },
+      {
+        "name": "Filter2e73f075a920f2e99512",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "pbi_activityevents"
+              }
+            },
+            "Property": "userid"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough"
+      },
+      {
+        "name": "Filter5e6853c0596ad90c5dc1",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "pbi_activityevents"
+              }
+            },
+            "Property": "reporttype"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough"
+      },
+      {
+        "name": "Filter63b2b821718dea17f6f0",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "pbi_activityevents"
+              }
+            },
+            "Property": "itemname"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough"
+      },
+      {
+        "name": "Filter6db356544c5dad2a4388",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "pbi_activityevents"
+              }
+            },
+            "Property": "distributionmethod"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough"
+      },
+      {
+        "name": "Filter3dfdbef8015073472842",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "pbi_activityevents"
+              }
+            },
+            "Property": "consumptionmethod"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough"
+      },
+      {
+        "name": "Filter4c9959df4909f017fe85",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "pbi_activityevents"
+              }
+            },
+            "Property": "appname"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough"
+      },
+      {
+        "name": "Filter966ca3149a7b86452f8e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DimDate"
+              }
+            },
+            "Property": "Date"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough"
+      }
+    ]
+  },
+  "pageBinding": {
+    "name": "Pod",
+    "type": "Drillthrough",
+    "parameters": [
+      {
+        "name": "Param_Filter1c746cc3e73100b35e84",
+        "boundFilter": "Filter1c746cc3e73100b35e84",
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "RelationCapacityGroupsDatasets"
+              }
+            },
+            "Property": "GroupName"
+          }
+        }
+      },
+      {
+        "name": "Param_Filter904c9a3923575c8c5767",
+        "boundFilter": "Filter904c9a3923575c8c5767",
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "RelationCapacityGroupsDatasets"
+              }
+            },
+            "Property": "DatasetName"
+          }
+        }
+      },
+      {
+        "name": "Param_Filterd52f322cbd5446fcb2d3",
+        "boundFilter": "Filterd52f322cbd5446fcb2d3",
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "RelationCapacityGroupsDatasets"
+              }
+            },
+            "Property": "CapacityName"
+          }
+        }
+      },
+      {
+        "name": "Param_Filter2e73f075a920f2e99512",
+        "boundFilter": "Filter2e73f075a920f2e99512",
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "pbi_activityevents"
+              }
+            },
+            "Property": "userid"
+          }
+        }
+      },
+      {
+        "name": "Param_Filter5e6853c0596ad90c5dc1",
+        "boundFilter": "Filter5e6853c0596ad90c5dc1",
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "pbi_activityevents"
+              }
+            },
+            "Property": "reporttype"
+          }
+        }
+      },
+      {
+        "name": "Param_Filter63b2b821718dea17f6f0",
+        "boundFilter": "Filter63b2b821718dea17f6f0",
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "pbi_activityevents"
+              }
+            },
+            "Property": "itemname"
+          }
+        }
+      },
+      {
+        "name": "Param_Filter6db356544c5dad2a4388",
+        "boundFilter": "Filter6db356544c5dad2a4388",
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "pbi_activityevents"
+              }
+            },
+            "Property": "distributionmethod"
+          }
+        }
+      },
+      {
+        "name": "Param_Filter3dfdbef8015073472842",
+        "boundFilter": "Filter3dfdbef8015073472842",
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "pbi_activityevents"
+              }
+            },
+            "Property": "consumptionmethod"
+          }
+        }
+      },
+      {
+        "name": "Param_Filter4c9959df4909f017fe85",
+        "boundFilter": "Filter4c9959df4909f017fe85",
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "pbi_activityevents"
+              }
+            },
+            "Property": "appname"
+          }
+        }
+      },
+      {
+        "name": "Param_Filter966ca3149a7b86452f8e",
+        "boundFilter": "Filter966ca3149a7b86452f8e",
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DimDate"
+              }
+            },
+            "Property": "Date"
+          }
+        }
+      }
+    ]
+  },
+  "objects": {
+    "background": [
+      {
+        "properties": {
+          "transparency": {
+            "expr": {
+              "Literal": {
+                "Value": "80D"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "outspace": [
+      {
+        "properties": {
+          "transparency": {
+            "expr": {
+              "Literal": {
+                "Value": "80D"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "outspacePane": [
+      {
+        "properties": {
+          "transparency": {
+            "expr": {
+              "Literal": {
+                "Value": "0D"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "filterCard": [
+      {
+        "properties": {
+          "transparency": {
+            "expr": {
+              "Literal": {
+                "Value": "0L"
+              }
+            }
+          }
+        },
+        "selector": {
+          "id": "Available"
+        }
+      }
+    ]
+  }
+}
