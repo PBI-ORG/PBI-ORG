@@ -1,0 +1,103 @@
+table RLS
+	lineageTag: 1bd93913-fc06-4994-adbf-f89c47d889af
+
+	column GroupId
+		dataType: string
+		lineageTag: 5c161602-9598-4c60-bebe-022e3072fcc9
+		summarizeBy: none
+		sourceColumn: GroupId
+
+		annotation SummarizationSetBy = Automatic
+
+	column GroupName
+		dataType: string
+		lineageTag: 8d6ac6fc-41f3-4c65-b8d5-6ee021fc42aa
+		summarizeBy: none
+		sourceColumn: GroupName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Access
+		dataType: string
+		lineageTag: 4543461c-a58b-43c2-ae08-4204b6254a7d
+		summarizeBy: none
+		sourceColumn: Access
+
+		annotation SummarizationSetBy = Automatic
+
+	column displayName
+		dataType: string
+		lineageTag: 03fdb119-70bf-413a-b280-6b9fc84bc6e9
+		summarizeBy: none
+		sourceColumn: displayName
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Email Address'
+		dataType: string
+		lineageTag: 127f5dae-de17-46ff-b168-b62ffd216205
+		summarizeBy: none
+		sourceColumn: Email Address
+
+		annotation SummarizationSetBy = Automatic
+
+	column principalType
+		dataType: string
+		lineageTag: 21360322-54ad-4aeb-85b6-980c39fd926a
+		summarizeBy: none
+		sourceColumn: principalType
+
+		annotation SummarizationSetBy = Automatic
+
+	column WorkspaceLink
+		dataType: string
+		lineageTag: 05bd62b3-c2e9-4359-9caf-9acfc7f18d1e
+		summarizeBy: none
+		sourceColumn: WorkspaceLink
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Having Publishergroup/not'
+		dataType: string
+		lineageTag: 7345430e-4560-4e9a-893b-ec388a7cc40b
+		summarizeBy: none
+		sourceColumn: Having Publishergroup/not
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Groupname starts with Entain/Digital/Number'
+		dataType: string
+		lineageTag: 5131b50c-a0ad-4204-8c6a-93b215c6a2cd
+		summarizeBy: none
+		sourceColumn: Groupname starts with Entain/Digital/Number
+
+		annotation SummarizationSetBy = Automatic
+
+	partition RLS = m
+		mode: import
+		source =
+				let
+				    Source = PowerPlatform.Dataflows([]),
+				    Workspaces = Source{[Id="Workspaces"]}[Data],
+				    #"6c3250c1-cd1a-4bb8-acb7-0518bc2c8151" = Workspaces{[workspaceId="6c3250c1-cd1a-4bb8-acb7-0518bc2c8151"]}[Data],
+				    #"e9e9ea33-99d3-4f97-9fd9-7c0e43f4c844" = #"6c3250c1-cd1a-4bb8-acb7-0518bc2c8151"{[dataflowId="e9e9ea33-99d3-4f97-9fd9-7c0e43f4c844"]}[Data],
+				    AppsUsers_ = #"e9e9ea33-99d3-4f97-9fd9-7c0e43f4c844"{[entity="GroupsUsers",version=""]}[Data],
+				    #"Removed Columns" = Table.RemoveColumns(AppsUsers_,{"graphId", "userType", "identifier"}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Removed Columns",{{"groupUserAccessRight", "Access"}}),
+				    #"Filtered Rows" = Table.SelectRows(#"Renamed Columns", each Text.Contains([displayName], "Publisher") or Text.Contains([displayName], "publisher") or Text.Contains([displayName], "Admin") or Text.Contains([displayName], "admin")),
+				    #"Merged Queries" = Table.NestedJoin(#"Filtered Rows", {"displayName"}, #"SecurityGroups", {"principalgroupname"}, "SecurityGroups", JoinKind.LeftOuter),
+				    #"Expanded SecurityGroups" = Table.ExpandTableColumn(#"Merged Queries", "SecurityGroups", {"userprincipalname"}, {"userprincipalname"}),
+				    #"Merged Columns" = Table.CombineColumns(#"Expanded SecurityGroups",{"emailAddress", "userprincipalname"},Combiner.CombineTextByDelimiter("", QuoteStyle.None),"Email Address"),
+				    #"Reordered Columns" = Table.ReorderColumns(#"Merged Columns",{"GroupId", "GroupName", "Access", "displayName", "Email Address", "principalType"}),
+				    #"Appended Query" = Table.Combine({#"Reordered Columns", #"GroupsUsers from Nested SecurityGroups", #"NestedGroups Not Mapping"}),
+				    #"Inserted Merged Column" = Table.AddColumn(#"Appended Query", "WorkspaceLink", each Text.Combine({"https://app.powerbi.com/groups/", [GroupId]}), type text),
+				    #"Added Conditional Column" = Table.AddColumn(#"Inserted Merged Column", "Custom Display name", each if Text.Contains([displayName], "Publisher") then 1 else 0),
+				    #"Added Conditional Column1" = Table.AddColumn(#"Added Conditional Column", "Custom Group Name", each if Text.StartsWith([GroupName], "Entain") then [GroupName] else if Text.StartsWith([GroupName], "Digital") then [GroupName] else if Text.StartsWith([GroupName], "_") then [GroupName] else null),
+				    #"Renamed Columns1" = Table.RenameColumns(#"Added Conditional Column1",{{"Custom Display name", "Having Publishergroup/not"}, {"Custom Group Name", "Groupname starts with Entain/Digital/Number"}})
+				in
+				    #"Renamed Columns1"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

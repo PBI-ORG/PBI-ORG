@@ -1,0 +1,198 @@
+table pbi_activityevents
+	lineageTag: 46c81282-6781-4331-af3b-bc9b814005e3
+
+	column activity
+		dataType: string
+		lineageTag: 98f7baab-b4af-479e-8ee6-4d7eaf5d724d
+		summarizeBy: none
+		sourceColumn: activity
+
+		annotation SummarizationSetBy = Automatic
+
+	column capacityname
+		dataType: string
+		lineageTag: 181bedf2-706b-4260-8c6f-7faffc24a98d
+		summarizeBy: none
+		sourceColumn: capacityname
+
+		annotation SummarizationSetBy = Automatic
+
+	column userid
+		dataType: string
+		lineageTag: 9b144218-8793-49fd-adc4-9af40d2d94f5
+		summarizeBy: none
+		sourceColumn: userid
+
+		annotation SummarizationSetBy = Automatic
+
+	column capacityid
+		dataType: string
+		lineageTag: 884747e3-d251-4c24-ae3b-83531d217a55
+		summarizeBy: none
+		sourceColumn: capacityid
+
+		annotation SummarizationSetBy = Automatic
+
+	column workspaceid
+		dataType: string
+		lineageTag: 8e6f975a-acee-48e3-9f00-8c77bc53862e
+		summarizeBy: none
+		sourceColumn: workspaceid
+
+		annotation SummarizationSetBy = Automatic
+
+	column workspacename
+		dataType: string
+		lineageTag: 1c387aff-e6f0-4907-9f66-6ad4a6e9d98d
+		summarizeBy: none
+		sourceColumn: workspacename
+
+		annotation SummarizationSetBy = Automatic
+
+	column datasetid
+		dataType: string
+		lineageTag: 6e29e82a-f0c5-4ac0-954c-89ae2f35b515
+		summarizeBy: none
+		sourceColumn: datasetid
+
+		annotation SummarizationSetBy = Automatic
+
+	column datasetname
+		dataType: string
+		lineageTag: 915c95e7-a77b-4c65-b906-17a38fd0770d
+		summarizeBy: none
+		sourceColumn: datasetname
+
+		annotation SummarizationSetBy = Automatic
+
+	column reportid
+		dataType: string
+		lineageTag: de79945f-78b3-4508-93f6-56556dd86190
+		summarizeBy: none
+		sourceColumn: reportid
+
+		annotation SummarizationSetBy = Automatic
+
+	column appname
+		dataType: string
+		lineageTag: 5ca9c6e5-f49c-4df5-9931-807edd2346b8
+		summarizeBy: none
+		sourceColumn: appname
+
+		annotation SummarizationSetBy = Automatic
+
+	column appreportid
+		dataType: string
+		lineageTag: 2e5455b4-bf36-43cc-a491-1eeee2270276
+		summarizeBy: none
+		sourceColumn: appreportid
+
+		annotation SummarizationSetBy = Automatic
+
+	column itemname
+		dataType: string
+		lineageTag: fad383ed-3749-4d01-9cb4-bb7d6c6ec85e
+		summarizeBy: none
+		sourceColumn: itemname
+
+		annotation SummarizationSetBy = Automatic
+
+	column ItemName_ExternalApplication
+		dataType: string
+		lineageTag: 47b49d07-1636-4427-99ff-d2aec0bef855
+		summarizeBy: none
+		sourceColumn: ItemName_ExternalApplication
+
+		annotation SummarizationSetBy = Automatic
+
+	column reporttype
+		dataType: string
+		lineageTag: 5304e0b7-8f91-4d35-99ed-399dcd196759
+		summarizeBy: none
+		sourceColumn: reporttype
+
+		annotation SummarizationSetBy = Automatic
+
+	column distributionmethod
+		dataType: string
+		lineageTag: 01e84dd5-3168-402c-9f4b-2b2e557c408b
+		summarizeBy: none
+		sourceColumn: distributionmethod
+
+		annotation SummarizationSetBy = Automatic
+
+	column consumptionmethod
+		dataType: string
+		lineageTag: 493207c9-665b-454a-9744-9ae687767bd0
+		summarizeBy: none
+		sourceColumn: consumptionmethod
+
+		annotation SummarizationSetBy = Automatic
+
+	column count
+		dataType: int64
+		formatString: 0
+		lineageTag: 6a5a4ce8-a565-450d-b178-590ed32108f0
+		summarizeBy: sum
+		sourceColumn: count
+
+		annotation SummarizationSetBy = Automatic
+
+	column Custom
+		dataType: string
+		lineageTag: 0d4d7149-1e30-406b-838b-a578428adebb
+		summarizeBy: none
+		sourceColumn: Custom
+
+		annotation SummarizationSetBy = Automatic
+
+	column Hour = HOUR(pbi_activityevents[CreationTime])
+		formatString: 0
+		lineageTag: 04edf4b6-e915-455d-96c6-885d43fcbc2a
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreationDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 4ca7b9ff-4bbb-4daa-b2bf-4ae15d8c6e10
+		summarizeBy: none
+		sourceColumn: CreationDate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column CreationTime
+		dataType: dateTime
+		formatString: Long Time
+		lineageTag: b2f9b45d-e103-440f-9dc4-64b77c7bc59c
+		summarizeBy: none
+		sourceColumn: CreationTime
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Time
+
+	partition pbi_activityevents = m
+		mode: import
+		source =
+				let
+				    Source = Value.NativeQuery(Snowflake.Databases(Server,Warehouse,[Role=Role]){[Name=Database]}[Data], "select #(lf)#(tab)distinct--case when operation = 'ViewReport' then 'Report' else 'Dashboard' end as Type#(lf)#(tab)p.activity#(lf)#(tab),p.creationtime#(lf)        ,p.capacityname#(lf)#(tab),p.userid#(lf)#(tab),p.capacityid #(lf)#(tab),p.workspaceid #(lf)    ,p.workspacename#(lf)#(tab),p.datasetid#(lf)#(tab),p.datasetname#(lf)#(tab),p.reportid#(lf)#(tab)--,dashboardid#(lf)#(tab)--,dashboardname#(lf)#(tab),p.appname#(lf)#(tab),p.appreportid#(lf)#(tab),p.itemname#(lf)#(tab),null as ItemName_ExternalApplication#(lf)#(tab),p.reporttype #(lf)#(tab),case when p.distributionmethod = '' then 'External Application' else p.distributionmethod end as distributionmethod#(lf)#(tab),case when p.consumptionmethod  = '' then 'External Application' else p.consumptionmethod end as consumptionmethod#(lf)#(tab),1 as count#(lf)#(tab),p1.userid as Developer#(lf)from #(lf)#(tab)EDLRETAILVIEWSBI.pbi_activityevents p left join #(lf)#(tab)(select distinct #(lf)#(tab)min(TO_DATE(substr(creationtime, 1,10))) as date#(lf)#(tab)--creationtime#(lf)#(tab),userid#(lf)#(tab)--,operation #(lf)#(tab)--,*#(lf)from #(lf)#(tab)EDLRETAILVIEWSBI.pbi_activityevents#(lf)where #(lf)#(tab)operation in #(lf)#(tab)#(tab)(#(lf)#(tab)#(tab)'CreateApp',#(lf)#(tab)#(tab)'CreateDataflow',#(lf)#(tab)#(tab)'CreateDatamart',#(lf)#(tab)#(tab)'CreateDataset',#(lf)#(tab)#(tab)--'CreateEmailSubscription',#(lf)#(tab)#(tab)'CreateFolder',#(lf)#(tab)#(tab)'CreateGateway',#(lf)#(tab)#(tab)'CreateGatewayClusterDatasource',#(lf)#(tab)#(tab)'CreateGatewayClusterUser',#(lf)#(tab)#(tab)'CreateGoal',#(lf)#(tab)#(tab)'CreateGoalValue',#(lf)#(tab)#(tab)'CreateReport',#(lf)#(tab)#(tab)'CreateScorecard',#(lf)#(tab)#(tab)'DeleteDashboard',#(lf)#(tab)#(tab)'DeleteDataflow',#(lf)#(tab)#(tab)'DeleteDatamart',#(lf)#(tab)#(tab)'DeleteDataset',#(lf)#(tab)#(tab)--'DeleteEmailSubscription',#(lf)#(tab)#(tab)'DeleteFolder',#(lf)#(tab)#(tab)'DeleteGateway',#(lf)#(tab)#(tab)'DeleteGatewayClusterDatasource',#(lf)#(tab)#(tab)'DeleteGoal',#(lf)#(tab)#(tab)'DeleteReport',#(lf)#(tab)#(tab)'DeleteTile',#(lf)#(tab)#(tab)'DownloadReport',#(lf)#(tab)#(tab)'EditDataset',#(lf)#(tab)#(tab)'EditDatasetProperties',#(lf)#(tab)#(tab)'EditReport',#(lf)#(tab)#(tab)'EditReportProperties',#(lf)#(tab)#(tab)'EditTile',#(lf)#(tab)#(tab)'RefreshDataset',#(lf)#(tab)#(tab)'RenameReport',#(lf)#(tab)#(tab)'RequestDataflowRefresh',#(lf)#(tab)#(tab)'SetScheduledRefresh',#(lf)#(tab)#(tab)'TakeOverDataset',#(lf)#(tab)#(tab)'UnassignWorkspaceFromPipeline',#(lf)#(tab)#(tab)'UpdateApp',#(lf)#(tab)#(tab)'UpdateDataflow',#(lf)#(tab)#(tab)'UpdateDatamart',#(lf)#(tab)#(tab)'UpdateDatasetParameters',#(lf)#(tab)#(tab)'UpdateDatasourceCredentials',#(lf)#(tab)#(tab)--'UpdateEmailSubscription',#(lf)#(tab)#(tab)'UpdateFeaturedTables',#(lf)#(tab)#(tab)'UpdateFolder',#(lf)#(tab)#(tab)'UpdateFolderAccess',#(lf)#(tab)#(tab)'UpdateGatewayClusterDatasource',#(lf)#(tab)#(tab)'UpdateGatewayClusterDatasourceCredentials',#(lf)#(tab)#(tab)'UpdateGatewayClusterMember',#(lf)#(tab)#(tab)'UpdateGatewayInstallerPrincipals',#(lf)#(tab)#(tab)'UpdateGatewayTenantPolicy'#(lf)#(tab)#(tab))#(lf)#(tab)and TO_DATE(substr(creationtime, 1,10)) >= (current_date - interval '90 days')#(lf)#(tab)and workspacename <> 'My Workspace'#(lf)#(tab)and capacityid <> ''#(lf)#(tab)#(lf)group by #(lf)userid) p1#(lf)on p.userid = p1.userid#(lf)where #(lf)#(tab)p.activity in ('ViewReport','AnalyzeInExcel')#(lf)#(tab)--activity in ('ViewReport','ViewDashboard')#(lf)#(tab)and (p.capacityid <> '' and p.capacityid is NOT NULL) --exclude ""My Workspace"" & ""PersonalWorkspace%"" for workspacename #(lf)#(tab)--From two years ago#(lf)#(tab)and cast(substr(p.creationtime , 1, 4) as int)*10000 + cast(substr(p.creationtime, 6, 2) as int)*100 + cast(substr(p.creationtime, 9, 2) as int) >= year(current_date - interval '2 years')*10000 + month(current_date)*100 + day(current_date)-1#(lf)#(tab)--Until Yesterday#(lf)#(tab)and cast(substr(p.creationtime , 1, 4) as int)*10000 + cast(substr(p.creationtime, 6, 2) as int)*100 + cast(substr(p.creationtime, 9, 2) as int) <= year(current_date)*10000 + month(current_date)*100 + day(current_date)-1 #(lf)AND (capacityname IS NULL OR capacityname <> 'Shared On Premium - Reserved')#(lf)AND (capacityid IS NULL OR capacityid <> '3CC1A097-02CD-4031-9FD9-991F2EE9B2D2')#(lf)AND (capacityname IS NULL OR capacityname <> 'Reserved Capacity for Pro Workspaces')#(lf)and NOT CONTAINS (workspacename ,'PersonalWorkspace')#(lf)#(lf)-- Calculating views for ""AnalyzedByExternalApplication"" as Capacity is null when activity is ""AnalyzedByExternalApplication""#(lf)UNION#(lf)#(lf)select #(lf)#(tab)distinct--case when operation = 'ViewReport' then 'Report' else 'Dashboard' end as Type#(lf)#(tab)p.activity#(lf)#(tab),p.creationtime#(lf)        ,p.capacityname#(lf)#(tab),p.userid#(lf)#(tab),p.capacityid #(lf)#(tab),p.workspaceid #(lf)        ,p.workspacename#(lf)#(tab),p.datasetid#(lf)#(tab),p.datasetname#(lf)#(tab),p.reportid#(lf)#(tab)--,dashboardid#(lf)#(tab)--,dashboardname#(lf)#(tab),p.appname#(lf)#(tab),p.appreportid#(lf)#(tab),p.datasetname as itemname#(lf)#(tab),case when substr(p.itemname,1,1) = 'P' then 'Power BI Desktop' else p.itemname end as ItemName_ExternalApplication#(lf)#(tab),p.reporttype #(lf)#(tab),case when p.distributionmethod = '' then 'External Application' else p.distributionmethod end as distributionmethod#(lf)#(tab),case when p.consumptionmethod  = '' then 'External Application' else p.consumptionmethod end as consumptionmethod#(lf)#(tab),1 as count#(lf)#(tab),p1.userid as Developer#(lf)from #(lf)#(tab)EDLRETAILVIEWSBI.pbi_activityevents p left join #(lf)#(tab)(select distinct #(lf)#(tab)min(TO_DATE(substr(creationtime, 1,10))) as date#(lf)#(tab)--creationtime#(lf)#(tab),userid#(lf)#(tab)--,operation #(lf)#(tab)--,*#(lf)from #(lf)#(tab)EDLRETAILVIEWSBI.pbi_activityevents#(lf)where #(lf)#(tab)operation in #(lf)#(tab)#(tab)(#(lf)#(tab)#(tab)'CreateApp',#(lf)#(tab)#(tab)'CreateDataflow',#(lf)#(tab)#(tab)'CreateDatamart',#(lf)#(tab)#(tab)'CreateDataset',#(lf)#(tab)#(tab)--'CreateEmailSubscription',#(lf)#(tab)#(tab)'CreateFolder',#(lf)#(tab)#(tab)'CreateGateway',#(lf)#(tab)#(tab)'CreateGatewayClusterDatasource',#(lf)#(tab)#(tab)'CreateGatewayClusterUser',#(lf)#(tab)#(tab)'CreateGoal',#(lf)#(tab)#(tab)'CreateGoalValue',#(lf)#(tab)#(tab)'CreateReport',#(lf)#(tab)#(tab)'CreateScorecard',#(lf)#(tab)#(tab)'DeleteDashboard',#(lf)#(tab)#(tab)'DeleteDataflow',#(lf)#(tab)#(tab)'DeleteDatamart',#(lf)#(tab)#(tab)'DeleteDataset',#(lf)#(tab)#(tab)--'DeleteEmailSubscription',#(lf)#(tab)#(tab)'DeleteFolder',#(lf)#(tab)#(tab)'DeleteGateway',#(lf)#(tab)#(tab)'DeleteGatewayClusterDatasource',#(lf)#(tab)#(tab)'DeleteGoal',#(lf)#(tab)#(tab)'DeleteReport',#(lf)#(tab)#(tab)'DeleteTile',#(lf)#(tab)#(tab)'DownloadReport',#(lf)#(tab)#(tab)'EditDataset',#(lf)#(tab)#(tab)'EditDatasetProperties',#(lf)#(tab)#(tab)'EditReport',#(lf)#(tab)#(tab)'EditReportProperties',#(lf)#(tab)#(tab)'EditTile',#(lf)#(tab)#(tab)'RefreshDataset',#(lf)#(tab)#(tab)'RenameReport',#(lf)#(tab)#(tab)'RequestDataflowRefresh',#(lf)#(tab)#(tab)'SetScheduledRefresh',#(lf)#(tab)#(tab)'TakeOverDataset',#(lf)#(tab)#(tab)'UnassignWorkspaceFromPipeline',#(lf)#(tab)#(tab)'UpdateApp',#(lf)#(tab)#(tab)'UpdateDataflow',#(lf)#(tab)#(tab)'UpdateDatamart',#(lf)#(tab)#(tab)'UpdateDatasetParameters',#(lf)#(tab)#(tab)'UpdateDatasourceCredentials',#(lf)#(tab)#(tab)--'UpdateEmailSubscription',#(lf)#(tab)#(tab)'UpdateFeaturedTables',#(lf)#(tab)#(tab)'UpdateFolder',#(lf)#(tab)#(tab)'UpdateFolderAccess',#(lf)#(tab)#(tab)'UpdateGatewayClusterDatasource',#(lf)#(tab)#(tab)'UpdateGatewayClusterDatasourceCredentials',#(lf)#(tab)#(tab)'UpdateGatewayClusterMember',#(lf)#(tab)#(tab)'UpdateGatewayInstallerPrincipals',#(lf)#(tab)#(tab)'UpdateGatewayTenantPolicy'#(lf)#(tab)#(tab))#(lf)#(tab)and TO_DATE(substr(creationtime, 1,10)) >= (current_date - interval '90 days')#(lf)#(tab)and workspacename <> 'My Workspace'#(lf)#(tab)--and capacityid <> ''#(lf)#(tab)--and userid not like '%Ladbrokes%'#(lf)#(tab)--and userid not like '%SPList%'#(lf)#(tab)--and userid = 'Ming.Thiang@betmgm.com'#(lf)#(tab)--and userid like '%icepo%'#(lf)group by #(lf)userid) p1#(lf)on p.userid = p1.userid#(lf)where #(lf)#(tab)p.activity in ('AnalyzedByExternalApplication')#(lf)#(tab)--activity in ('ViewReport','ViewDashboard')#(lf)#(tab)--and (p.capacityid <> '' and p.capacityid is NOT NULL) --exclude ""My Workspace"" & ""PersonalWorkspace%"" for workspacename #(lf)#(tab)--From two years ago#(lf)#(tab)and cast(substr(p.creationtime , 1, 4) as int)*10000 + cast(substr(p.creationtime, 6, 2) as int)*100 + cast(substr(p.creationtime, 9, 2) as int) >= year(current_date - interval '2 years')*10000 + month(current_date)*100 + day(current_date)-1#(lf)#(tab)--Until Yesterday#(lf)#(tab)and cast(substr(p.creationtime , 1, 4) as int)*10000 + cast(substr(p.creationtime, 6, 2) as int)*100 + cast(substr(p.creationtime, 9, 2) as int) <= year(current_date)*10000 + month(current_date)*100 + day(current_date)-1  #(lf)AND (capacityname IS NULL OR capacityname <> 'Shared On Premium - Reserved')#(lf)AND (capacityid IS NULL OR capacityid <> '3CC1A097-02CD-4031-9FD9-991F2EE9B2D2')#(lf)AND (capacityname IS NULL OR capacityname <> 'Reserved Capacity for Pro Workspaces')#(lf)and NOT CONTAINS (workspacename ,'PersonalWorkspace')", null, [EnableFolding=true]),
+				    #"Renamed Columns" = Table.RenameColumns(Source,{{"ACTIVITY", "activity"}, {"CREATIONTIME", "creationtime"}, {"CAPACITYNAME", "capacityname"}, {"USERID", "userid"}, {"CAPACITYID", "capacityid"}, {"WORKSPACEID", "workspaceid"}, {"WORKSPACENAME", "workspacename"}, {"DATASETID", "datasetid"}, {"DATASETNAME", "datasetname"}, {"REPORTID", "reportid"}, {"APPNAME", "appname"}, {"APPREPORTID", "appreportid"}, {"ITEMNAME", "itemname"}, {"ITEMNAME_EXTERNALAPPLICATION", "ItemName_ExternalApplication"}, {"REPORTTYPE", "reporttype"}, {"DISTRIBUTIONMETHOD", "distributionmethod"}, {"CONSUMPTIONMETHOD", "consumptionmethod"}, {"COUNT", "count"}, {"DEVELOPER", "Developer"}}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns",{{"creationtime", type datetime}}),
+				    #"Duplicated Column" = Table.DuplicateColumn(#"Changed Type", "creationtime", "creationtime - Copy"),
+				    #"Changed Type3" = Table.TransformColumnTypes(#"Duplicated Column",{{"creationtime - Copy", type time}, {"creationtime", type date}}),
+				    #"Renamed Columns1" = Table.RenameColumns(#"Changed Type3",{{"creationtime", "CreationDate"}, {"creationtime - Copy", "CreationTime"}}),
+				    #"Reordered Columns" = Table.ReorderColumns(#"Renamed Columns1",{"activity", "CreationDate", "CreationTime", "capacityname", "userid", "capacityid", "workspaceid", "workspacename", "datasetid", "datasetname", "reportid", "appname", "appreportid", "itemname", "ItemName_ExternalApplication", "reporttype", "distributionmethod", "consumptionmethod", "count", "Developer"}),
+				    #"Added Conditional Column" = Table.AddColumn(#"Reordered Columns", "Custom", each if [Developer] = null then 0 else 1),
+				    #"Removed Columns" = Table.RemoveColumns(#"Added Conditional Column",{"Developer"}),
+				    #"Filtered Rows" = Table.SelectRows(#"Removed Columns", each true)
+				in
+				    #"Filtered Rows"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
